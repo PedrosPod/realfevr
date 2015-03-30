@@ -1,0 +1,106 @@
+@import "../assembler.less";
+
+
+//== HEADER
+//
+//##
+.main-header
+{
+  // Box
+  height: @header-h;
+  width: 100%;
+
+ // Style
+  background: #FCFCFC;
+  .box-shadow(~" 0px 1px 2px 0px rgba(0,0,0,0.25), inset 0px -3px 0px 0px rgba(0,0,0,0.05)");
+
+
+  //  ** Sub sections ** //
+  .logo-symbol
+  {
+    // Box
+    width: @header-h;
+    height: @header-h;
+
+    // Position
+    position: absolute;
+    left: 0; top: 0;
+
+    // Style
+    border: 0;
+    background: @brand-primary;
+    box-shadow: inset 0px -3px 0px 0px rgba(0,0,0,0.10);
+  }
+  .logo-lettering
+  {
+    // Box
+    width: 200px;
+    height: @header-h - 40px;
+    
+    // Position
+    position: absolute;
+    top: 20px;
+    left: @header-h + 15px;
+    
+    // Style
+    background: url("../../img/rf-lettering.svg") no-repeat left center;
+    background-size: contain;
+  }
+  .user-menu
+  {
+    // Box
+    width: @header-h*4;
+    height: @header-h;
+    padding: 0;
+    display: inline-block;
+    // Position
+    position: absolute;
+    top: 0; right: 0;
+
+    & > li
+    {
+      // Position
+      float: left;
+      // Style
+      list-style: none;
+
+      .this-option
+      {
+        width: @header-h;
+        height: @header-h;
+        display: block;
+        // Position
+        position: relative;
+        // Style
+        background: none;
+        border: none;
+        .box-shadow(~"inset 1px 0px 0px 0px rgba(235,235,235,0.50)");
+
+        &:focus, &:active
+        {
+          outline: none;
+        }
+
+        &.user-avatar
+        {
+          @img-size: 60px;
+          img
+          {
+            // Box
+            width: @img-size;
+            height: @img-size;
+            margin-left: -(@img-size / 2);
+            margin-top: -(@img-size / 2);
+
+            // Position
+            position: absolute;
+            top: 50%; left: 50%;
+          }
+        }
+
+      }
+    }
+
+  }
+
+}

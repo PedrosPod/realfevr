@@ -3,12 +3,101 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Real Fevr</title>
+
+    <!-- RealFevr Base CSS -->
+    <link href="css/unifier.css" rel="stylesheet">
+
+
 </head>
 <body>
 
-<div class="main-header">
+<div class="global-wrapper">
+    <!-- Header structure -->
+    <header class="main-header">
+        <button class="logo-symbol">
+            <img src="img/rf-logo.svg" alt="Real Fevr Home"/>
+        </button>
+        <div class="logo-lettering">
 
+        </div>
+
+        <ul class="user-menu">
+            <li>
+                <button class="this-option">
+                    <span class="ico size--24px centered">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                            <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+                            <title>icon-help</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Icons-Matrix" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                                <g id="icons-24-sprite" sketch:type="MSArtboardGroup" transform="translate(-48.000000, 0.000000)" fill="#C8C8C8">
+                                    <path d="M60,0 C53.4,0 48,5.4 48,12 C48,18.6 53.4,24 60,24 C66.6,24 72,18.6 72,12 C72,5.4 66.6,0 60,0 L60,0 Z M61.2,20.4 L58.8,20.4 L58.8,18 L61.2,18 L61.2,20.4 L61.2,20.4 Z M63.72,11.16 L62.64,12.24 C61.68,13.08 61.2,13.8 61.2,15.6 L58.8,15.6 L58.8,15 C58.8,13.68 59.28,12.48 60.24,11.64 L61.68,10.08 C62.16,9.72 62.4,9.12 62.4,8.4 C62.4,7.08 61.32,6 60,6 C58.68,6 57.6,7.08 57.6,8.4 L55.2,8.4 C55.2,5.76 57.36,3.6 60,3.6 C62.64,3.6 64.8,5.76 64.8,8.4 C64.8,9.48 64.32,10.44 63.72,11.16 L63.72,11.16 Z" id="icon-help" sketch:type="MSShapeGroup"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="this-option">
+                    <span class="ico size--24px centered">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                            <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+                            <title>icon-messages</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Icons-Matrix" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                                <g id="icons-24-sprite" sketch:type="MSArtboardGroup" fill="#C8C8C8">
+                                    <path d="M21.6,0 L2.4,0 C1.08,0 0,1.08 0,2.4 L0,24 L4.8,19.2 L21.6,19.2 C22.92,19.2 24,18.12 24,16.8 L24,2.4 C24,1.08 22.92,0 21.6,0 L21.6,0 Z M4.8,8.4 L19.2,8.4 L19.2,10.8 L4.8,10.8 L4.8,8.4 L4.8,8.4 Z M14.4,14.4 L4.8,14.4 L4.8,12 L14.4,12 L14.4,14.4 L14.4,14.4 Z M19.2,7.2 L4.8,7.2 L4.8,4.8 L19.2,4.8 L19.2,7.2 L19.2,7.2 Z" id="icon-messages" sketch:type="MSShapeGroup"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="this-option">
+                    <span class="ico size--24px centered">
+                        <svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                            <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+                            <title>icon-notifications</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Icons-Matrix" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                                <g id="icons-24-sprite" sketch:type="MSArtboardGroup" transform="translate(-26.000000, 0.000000)" fill="#C8C8C8">
+                                    <path d="M36.5,24 C37.8588235,24 38.9705882,22.92 38.9705882,21.6 L34.0294118,21.6 C34.0294118,22.92 35.1411765,24 36.5,24 L36.5,24 Z M44.5294118,16.8 L44.5294118,10.2 C44.5294118,6.48 41.9352941,3.48 38.3529412,2.64 L38.3529412,1.8 C38.3529412,0.84 37.4882353,0 36.5,0 C35.5117647,0 34.6470588,0.84 34.6470588,1.8 L34.6470588,2.64 C31.0647059,3.48 28.4705882,6.48 28.4705882,10.2 L28.4705882,16.8 L26,19.2 L26,20.4 L47,20.4 L47,19.2 L44.5294118,16.8 L44.5294118,16.8 Z" id="icon-notifications" sketch:type="MSShapeGroup"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="this-option user-avatar">
+                    <img src="img/user-avatar.png" alt="" class="img-circle"/>
+                </button>
+            </li>
+
+        </ul>
+    </header>
+    <!-- Sidebar Menu-->
+    <aside class="main-navigation">
+    </aside>
+
+    <section class="main-container">
+    </section>
+
+    <section class="footer">
+
+    </section>
 </div>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- LESS -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

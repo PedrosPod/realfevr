@@ -1,0 +1,41 @@
+@import "../assembler.less";
+
+.global-wrapper
+{
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+
+
+//== ICONS
+//
+//##
+
+.ico
+{
+  // Box
+  display: block;
+
+
+  &.centered
+  {
+    // Position
+    position: absolute;
+    top: 50%; left: 50%;
+  }
+  &.size
+  {
+    &--24px
+    {
+      @icon-size: 24px;
+    // box
+    width: @icon-size;
+    height: @icon-size;
+    margin: -(@icon-size / 2 );
+    // style
+    }
+  }
+
+
+}
