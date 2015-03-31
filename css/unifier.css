@@ -3188,8 +3188,8 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #0090e9;
+  border-color: #0080d0;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -3198,8 +3198,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #269abc;
+  background-color: #0070b6;
+  border-color: #005a92;
 }
 .btn-info:active,
 .btn-info.active,
@@ -3224,11 +3224,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #0090e9;
+  border-color: #0080d0;
 }
 .btn-info .badge {
-  color: #5bc0de;
+  color: #0090e9;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -4806,11 +4806,11 @@ a.label:focus {
   background-color: #449d44;
 }
 .label-info {
-  background-color: #5bc0de;
+  background-color: #0090e9;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #31b0d5;
+  background-color: #0070b6;
 }
 .label-warning {
   background-color: #f0ad4e;
@@ -5079,7 +5079,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #5bc0de;
+  background-color: #0090e9;
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6662,6 +6662,26 @@ button.close {
   height: 24px;
   margin: -12px;
 }
+.ico .this-counter {
+  width: 26px;
+  height: 26px;
+  display: none;
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  border: 3px solid #fff;
+  -webkit-border-radius: 26px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 26px;
+  -moz-background-clip: padding;
+  border-radius: 26px;
+  background-clip: padding-box;
+  background: #0090e9;
+  font-size: 11px;
+  line-height: 20px;
+  font-weight: 600;
+  color: white;
+}
 .main-header {
   height: 80px;
   width: 100%;
@@ -6717,6 +6737,9 @@ button.close {
 .main-header .user-menu > li .this-option:active {
   outline: none;
 }
+.main-header .user-menu > li .this-option:hover {
+  background: #f9f9f9;
+}
 .main-header .user-menu > li .this-option:hover .ico svg {
   fill: #555555;
 }
@@ -6728,4 +6751,18 @@ button.close {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+.main-header .user-menu > li .this-option.high-l .this-counter {
+  display: block;
+}
+.main-header .user-menu > li .this-option.high-l .ico svg {
+  fill: #555555;
+}
+.main-navigation {
+  width: 80px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  background: #222222;
 }
