@@ -9,4 +9,151 @@
 
   // Style
   background: @gray-darker;
+
+  .nav-options
+  {
+    // Box
+    padding: 0;
+    .option-item
+    {
+      // Box
+      width: @header-h;
+      height: @header-h;
+      margin: 0; padding: 0;
+      // Position
+      position: relative;
+      float: left;
+
+      & > button
+      {
+        // Box
+        width: 100%;
+        height: 100%;
+        padding: 45px 5px 10px;
+        // Position
+        position: relative;
+        // Style
+        border: 0;
+        background: none;
+        // Type
+        text-align: center;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase ;
+        color: @gray;
+        .this-icon
+        {
+          // Box
+          width: 30px;
+          height: 30px;
+          margin-left: -16px;
+          display: block;
+          // Position
+          position: absolute;
+          top: 10px; left: 50%;
+          // Style
+          .opacity(.3);
+          img
+          {
+            width: 100%;
+            height: 100%;
+
+          }
+        }
+
+      }
+
+      &:hover,
+      &.is-active
+      {
+        & > button
+        {
+          color: #fff;
+          .this-icon
+          {
+            .opacity(1);
+          }
+        }
+        &.home
+        {
+          & > button
+          {
+            background: @gray;
+          }
+        }
+        &.league
+        {
+          & > button
+          {
+            background: @section-league;
+          }
+        }
+        &.team
+        {
+          & > button
+          {
+            background: @section-team;
+          }
+        }
+        &.players
+        {
+          & > button
+          {
+            background: @section-players;
+          }
+        }
+        &.calendar
+        {
+          & > button
+          {
+            background: @section-calendar;
+          }
+        }
+      }
+
+
+
+    }
+  }
+
+  .has-submenu
+  {
+    .this-submenu
+    {
+      padding: 0;
+      width: 600px;
+      display: none;
+      // Position
+      position: absolute;
+      left: 100%; top: 0;
+      // Style
+      background: #fff;
+      .box-shadow(~"0px 1px 3px rgba(0,0,0,.13), 0px 8px 16px rgba(0,0,0,.24)");
+      .border-radius(0, 3px, 3px, 0);
+      & > li
+      {
+
+
+        // Position
+        float: left;
+        display: block;
+        & > button
+        {
+          // Box
+          min-width: @header-h;
+          height: @header-h;
+          padding: 0 15px;
+          // Style
+          background: none;
+          border: 0;
+        }
+      }
+    }
+
+    &:hover,
+    &.is-active
+    {
+      .this-submenu { display: block }
+    }
+  }
 }
