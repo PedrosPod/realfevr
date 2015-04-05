@@ -9,7 +9,7 @@
 
 
 </head>
-<body>
+<body class="museo museo-sans">
 
 <div class="global-wrapper">
     <!-- Header structure -->
@@ -85,14 +85,14 @@
         </ul>
     </header>
     <!-- Sidebar Menu-->
-    <aside class="main-navigation">
+    <aside class="main-navigation" data-area="main-navigation">
      <ul class="nav-options">
          <li class="option-item home">
              <button>
                  <span class="this-icon">
                      <img src="img/icon-home.svg" alt=""/>
                  </span>
-                 Home
+                 <span class="area-title">Home</span>
              </button>
          </li>
 
@@ -101,54 +101,112 @@
                  <span class="this-icon">
                      <img src="img/icon-league.svg" alt=""/>
                  </span>
-                 Liga
+                 <span class="area-title">
+                     Liga
+                 </span>
              </button>
              <ul class="this-submenu">
                  <li>
-                     <button>Teste</button>
+                     <button>Resumo</button>
                  </li>
                  <li>
-                     <button>Teste</button>
+                     <button>Comunicados</button>
                  </li>
                  <li>
-                     <button>Teste</button>
+                     <button>Histórico de Transferências</button>
                  </li>
                  <li>
-                     <button>Teste</button>
+                     <button>Histórico de Draft</button>
+                 </li>
+                 <li>
+                     <button>
+                         Definições
+                     </button>
                  </li>
              </ul>
          </li>
 
-         <li class="option-item team">
+         <li class="option-item team has-submenu">
              <button>
                  <span class="this-icon">
                      <img src="img/icon-team.svg" alt=""/>
                  </span>
-                 Equipa
+                 <span class="area-title">
+                     Equipa
+                 </span>
+
              </button>
+             <ul class="this-submenu">
+                 <li>
+                     <button>11 Inicial</button>
+                 </li>
+                 <li>
+                     <button>Waivers</button>
+                 </li>
+                 <li>
+                     <button>Histórico de transferências</button>
+                 </li>
+                 <li>
+                     <button>Definições</button>
+                 </li>
+             </ul>
          </li>
 
-         <li class="option-item players">
+         <li class="option-item players has-submenu">
              <button>
                  <span class="this-icon">
                      <img src="img/icon-players.svg" alt=""/>
                  </span>
-                 Jogadores
+                 <span class="area-title">
+                     Jogadores
+                 </span>
+
              </button>
+             <ul class="this-submenu">
+                 <li>
+                     <button>Mercado</button>
+                 </li>
+                 <li>
+                     <button>Olheiros</button>
+                 </li>
+             </ul>
          </li>
 
-         <li class="option-item calendar">
+         <li class="option-item calendar has-submenu">
              <button>
                  <span class="this-icon">
                      <img src="img/icon-calendar.svg" alt=""/>
                  </span>
-                 Calendário
+                 <span class="area-title">
+                     Calendário
+                 </span>
+
              </button>
+             <ul class="this-submenu">
+                 <li>
+                     <button>Jornada Atual</button>
+                 </li>
+                 <li>
+                     <button>O meu jogo</button>
+                 </li>
+                 <li>
+                     <button>Calendário Completo</button>
+                 </li>
+                 <li>
+                     <button>Playoffs</button>
+                 </li>
+                 <li>
+                     <button>
+                         Definições
+                     </button>
+                 </li>
+             </ul>
          </li>
      </ul>   
     </aside>
 
     <section class="main-container">
+
     </section>
 
     <section class="footer">
@@ -162,5 +220,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<!-- RealFevr Custom JS -->
+<script src="js/rf_custom.js"></script>
 </body>
 </html>

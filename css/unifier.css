@@ -1072,7 +1072,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -1175,7 +1175,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: "museo", Georgia, "Times New Roman", Times, serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -5885,7 +5885,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5998,7 +5998,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6716,7 +6716,7 @@ button.close {
   position: absolute;
   top: 20px;
   left: 95px;
-  background: url("../../img/rf-lettering.svg") no-repeat left center;
+  background: url("../img/rf-lettering.svg") no-repeat left center;
   background-size: contain;
 }
 .main-header .user-menu {
@@ -6788,17 +6788,26 @@ button.close {
   float: left;
 }
 .main-navigation .nav-options .option-item > button {
+  overflow: hidden;
   width: 100%;
   height: 100%;
   padding: 45px 5px 10px;
   position: relative;
   border: 0;
   background: none;
+}
+.main-navigation .nav-options .option-item > button .area-title {
+  width: 100%;
+  display: block;
   text-align: center;
   font-size: 10px;
   font-weight: 600;
-  text-transform: uppercase ;
+  text-transform: uppercase;
   color: #555555;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .main-navigation .nav-options .option-item > button .this-icon {
   width: 30px;
@@ -6808,6 +6817,10 @@ button.close {
   position: absolute;
   top: 10px;
   left: 50%;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   zoom: 1;
   -webkit-opacity: 0.3;
   -moz-opacity: 0.3;
@@ -6818,17 +6831,32 @@ button.close {
   width: 100%;
   height: 100%;
 }
-.main-navigation .nav-options .option-item:hover > button,
-.main-navigation .nav-options .option-item.is-active > button {
+.main-navigation .nav-options .option-item:hover > button .area-title,
+.main-navigation .nav-options .option-item.is-active > button .area-title {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
   color: #fff;
+  font-weight: 700;
+  font-size: 11px;
 }
 .main-navigation .nav-options .option-item:hover > button .this-icon,
 .main-navigation .nav-options .option-item.is-active > button .this-icon {
+  width: 100px;
+  height: 100px;
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  margin-left: -50px;
   zoom: 1;
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
-  filter: alpha(opacity=100);
+  -webkit-opacity: 0.25;
+  -moz-opacity: 0.25;
+  opacity: 0.25;
+  filter: alpha(opacity=25);
 }
 .main-navigation .nav-options .option-item:hover.home > button,
 .main-navigation .nav-options .option-item.is-active.home > button {
@@ -6838,35 +6866,71 @@ button.close {
 .main-navigation .nav-options .option-item.is-active.league > button {
   background: #29b6f6;
 }
+.main-navigation .nav-options .option-item:hover.league .this-submenu button:hover,
+.main-navigation .nav-options .option-item.is-active.league .this-submenu button:hover {
+  -moz-box-shadow: inset 0 -3px 0 #29b6f6;
+  -webkit-box-shadow: inset 0 -3px 0 #29b6f6;
+  box-shadow: inset 0 -3px 0 #29b6f6;
+  color: #29b6f6;
+}
 .main-navigation .nav-options .option-item:hover.team > button,
 .main-navigation .nav-options .option-item.is-active.team > button {
   background: #ef6c00;
+}
+.main-navigation .nav-options .option-item:hover.team .this-submenu button:hover,
+.main-navigation .nav-options .option-item.is-active.team .this-submenu button:hover {
+  -moz-box-shadow: inset 0px -3px 0 #ef6c00;
+  -webkit-box-shadow: inset 0px -3px 0 #ef6c00;
+  box-shadow: inset 0px -3px 0 #ef6c00;
+  color: #ef6c00;
 }
 .main-navigation .nav-options .option-item:hover.players > button,
 .main-navigation .nav-options .option-item.is-active.players > button {
   background: #66bb6a;
 }
+.main-navigation .nav-options .option-item:hover.players .this-submenu button:hover,
+.main-navigation .nav-options .option-item.is-active.players .this-submenu button:hover {
+  -moz-box-shadow: inset 0px -3px 0 #66bb6a;
+  -webkit-box-shadow: inset 0px -3px 0 #66bb6a;
+  box-shadow: inset 0px -3px 0 #66bb6a;
+  color: #66bb6a;
+}
 .main-navigation .nav-options .option-item:hover.calendar > button,
 .main-navigation .nav-options .option-item.is-active.calendar > button {
   background: #db4105;
 }
+.main-navigation .nav-options .option-item:hover.calendar .this-submenu button:hover,
+.main-navigation .nav-options .option-item.is-active.calendar .this-submenu button:hover {
+  -moz-box-shadow: inset 0 -3px 0 #db4105;
+  -webkit-box-shadow: inset 0 -3px 0 #db4105;
+  box-shadow: inset 0 -3px 0 #db4105;
+  color: #db4105;
+}
 .main-navigation .has-submenu .this-submenu {
   padding: 0;
-  width: 600px;
-  display: none;
+  width: 800px;
+  visibility: hidden;
   position: absolute;
   left: 100%;
   top: 0;
+  -webkit-transform: translateY(5px);
+  -moz-transform: translateY(5px);
+  -o-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  transform: translateY(5px);
+  -moz-transition: all 150ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
   background: #fff;
-  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,.13), 0px 8px 16px rgba(0,0,0,.24);
-  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.13), 0px 8px 16px rgba(0,0,0,.24);
-  box-shadow: 0px 1px 3px rgba(0,0,0,.13), 0px 8px 16px rgba(0,0,0,.24);
-  -webkit-border-radius: 0 3px 3px 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 3px 3px 0;
-  -moz-background-clip: padding;
-  border-radius: 0 3px 3px 0;
-  background-clip: padding-box;
+  -moz-box-shadow: 0px 1px 1px rgba(0,0,0,.13), 0px 1px 3px rgba(0,0,0,.24);
+  -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,.13), 0px 1px 3px rgba(0,0,0,.24);
+  box-shadow: 0px 1px 1px rgba(0,0,0,.13), 0px 1px 3px rgba(0,0,0,.24);
+  zoom: 1;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
 .main-navigation .has-submenu .this-submenu > li {
   float: left;
@@ -6878,8 +6942,35 @@ button.close {
   padding: 0 15px;
   background: none;
   border: 0;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  font-family: "museo", Georgia, "Times New Roman", Times, serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #a6a6a6;
+}
+.main-navigation .has-submenu .this-submenu > li > button:hover {
+  -moz-box-shadow: inset 0 -5px 0 #eeeeee;
+  -webkit-box-shadow: inset 0 -5px 0 #eeeeee;
+  box-shadow: inset 0 -5px 0 #eeeeee;
 }
 .main-navigation .has-submenu:hover .this-submenu,
 .main-navigation .has-submenu.is-active .this-submenu {
-  display: block;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  zoom: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
+  box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
 }

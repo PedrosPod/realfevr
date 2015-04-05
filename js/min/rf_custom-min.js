@@ -1,0 +1,1 @@
+function leftNavStretch(){var t=$(window).width()-80;$('[data-area="main-navigation"] .this-submenu').css("width",t)}$(document).ready(function(){leftNavStretch()});
