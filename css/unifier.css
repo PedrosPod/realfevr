@@ -1072,7 +1072,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museosans_500", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -1175,7 +1175,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "museo", Georgia, "Times New Roman", Times, serif;
+  font-family: "museo500", "Roboto", Georgia, "Times New Roman", Times, serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1277,6 +1277,7 @@ h5,
 h6,
 .h6 {
   font-size: 12px;
+  font-family: "museosans_500", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 p {
   margin: 0 0 10px;
@@ -5885,7 +5886,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museosans_500", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5998,7 +5999,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museosans_500", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6695,6 +6696,8 @@ button.close {
 .main-header {
   height: 80px;
   width: 100%;
+  position: relative;
+  z-index: 1;
   background: #FCFCFC;
   -moz-box-shadow:  0px 1px 2px 0px rgba(0,0,0,0.25), inset 0px -3px 0px 0px rgba(0,0,0,0.05);
   -webkit-box-shadow:  0px 1px 2px 0px rgba(0,0,0,0.25), inset 0px -3px 0px 0px rgba(0,0,0,0.05);
@@ -6774,6 +6777,7 @@ button.close {
   top: 80px;
   left: 0;
   bottom: 0;
+  z-index: 1;
   background: #222222;
 }
 .main-navigation .nav-options {
@@ -6787,8 +6791,10 @@ button.close {
   position: relative;
   float: left;
 }
+.main-navigation .nav-options .option-item > a,
 .main-navigation .nav-options .option-item > button {
   overflow: hidden;
+  display: block;
   width: 100%;
   height: 100%;
   padding: 45px 5px 10px;
@@ -6796,6 +6802,7 @@ button.close {
   border: 0;
   background: none;
 }
+.main-navigation .nav-options .option-item > a .area-title,
 .main-navigation .nav-options .option-item > button .area-title {
   width: 100%;
   display: block;
@@ -6809,6 +6816,7 @@ button.close {
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
+.main-navigation .nav-options .option-item > a .this-icon,
 .main-navigation .nav-options .option-item > button .this-icon {
   width: 30px;
   height: 30px;
@@ -6827,12 +6835,15 @@ button.close {
   opacity: 0.3;
   filter: alpha(opacity=30);
 }
+.main-navigation .nav-options .option-item > a .this-icon img,
 .main-navigation .nav-options .option-item > button .this-icon img {
   width: 100%;
   height: 100%;
 }
-.main-navigation .nav-options .option-item:hover > button .area-title,
-.main-navigation .nav-options .option-item.is-active > button .area-title {
+.main-navigation .nav-options .option-item:hover > a {
+  text-decoration: none;
+}
+.main-navigation .nav-options .option-item:hover > a .area-title {
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -o-transform: translateY(-100%);
@@ -6842,8 +6853,7 @@ button.close {
   font-weight: 700;
   font-size: 11px;
 }
-.main-navigation .nav-options .option-item:hover > button .this-icon,
-.main-navigation .nav-options .option-item.is-active > button .this-icon {
+.main-navigation .nav-options .option-item:hover > a .this-icon {
   width: 100px;
   height: 100px;
   -moz-transform: translate3d(0, 0, 0);
@@ -6858,49 +6868,40 @@ button.close {
   opacity: 0.25;
   filter: alpha(opacity=25);
 }
-.main-navigation .nav-options .option-item:hover.home > button,
-.main-navigation .nav-options .option-item.is-active.home > button {
+.main-navigation .nav-options .option-item:hover.home > a {
   background: #555555;
 }
-.main-navigation .nav-options .option-item:hover.league > button,
-.main-navigation .nav-options .option-item.is-active.league > button {
+.main-navigation .nav-options .option-item:hover.league > a {
   background: #29b6f6;
 }
-.main-navigation .nav-options .option-item:hover.league .this-submenu button:hover,
-.main-navigation .nav-options .option-item.is-active.league .this-submenu button:hover {
+.main-navigation .nav-options .option-item:hover.league .this-submenu button:hover {
   -moz-box-shadow: inset 0 -3px 0 #29b6f6;
   -webkit-box-shadow: inset 0 -3px 0 #29b6f6;
   box-shadow: inset 0 -3px 0 #29b6f6;
   color: #29b6f6;
 }
-.main-navigation .nav-options .option-item:hover.team > button,
-.main-navigation .nav-options .option-item.is-active.team > button {
+.main-navigation .nav-options .option-item:hover.team > a {
   background: #ef6c00;
 }
-.main-navigation .nav-options .option-item:hover.team .this-submenu button:hover,
-.main-navigation .nav-options .option-item.is-active.team .this-submenu button:hover {
+.main-navigation .nav-options .option-item:hover.team .this-submenu button:hover {
   -moz-box-shadow: inset 0px -3px 0 #ef6c00;
   -webkit-box-shadow: inset 0px -3px 0 #ef6c00;
   box-shadow: inset 0px -3px 0 #ef6c00;
   color: #ef6c00;
 }
-.main-navigation .nav-options .option-item:hover.players > button,
-.main-navigation .nav-options .option-item.is-active.players > button {
+.main-navigation .nav-options .option-item:hover.players > a {
   background: #66bb6a;
 }
-.main-navigation .nav-options .option-item:hover.players .this-submenu button:hover,
-.main-navigation .nav-options .option-item.is-active.players .this-submenu button:hover {
+.main-navigation .nav-options .option-item:hover.players .this-submenu button:hover {
   -moz-box-shadow: inset 0px -3px 0 #66bb6a;
   -webkit-box-shadow: inset 0px -3px 0 #66bb6a;
   box-shadow: inset 0px -3px 0 #66bb6a;
   color: #66bb6a;
 }
-.main-navigation .nav-options .option-item:hover.calendar > button,
-.main-navigation .nav-options .option-item.is-active.calendar > button {
+.main-navigation .nav-options .option-item:hover.calendar > a {
   background: #db4105;
 }
-.main-navigation .nav-options .option-item:hover.calendar .this-submenu button:hover,
-.main-navigation .nav-options .option-item.is-active.calendar .this-submenu button:hover {
+.main-navigation .nav-options .option-item:hover.calendar .this-submenu button:hover {
   -moz-box-shadow: inset 0 -3px 0 #db4105;
   -webkit-box-shadow: inset 0 -3px 0 #db4105;
   box-shadow: inset 0 -3px 0 #db4105;
@@ -6909,6 +6910,7 @@ button.close {
 .main-navigation .has-submenu .this-submenu {
   padding: 0;
   width: 800px;
+  display: block;
   visibility: hidden;
   position: absolute;
   left: 100%;
@@ -6946,7 +6948,7 @@ button.close {
   -webkit-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  font-family: "museo", Georgia, "Times New Roman", Times, serif;
+  font-family: "museo500", "Roboto", Georgia, "Times New Roman", Times, serif;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
@@ -6957,8 +6959,8 @@ button.close {
   -webkit-box-shadow: inset 0 -5px 0 #eeeeee;
   box-shadow: inset 0 -5px 0 #eeeeee;
 }
-.main-navigation .has-submenu:hover .this-submenu,
-.main-navigation .has-submenu.is-active .this-submenu {
+.main-navigation .has-submenu:hover .this-submenu {
+  z-index: 1;
   visibility: visible;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -6973,4 +6975,66 @@ button.close {
   -moz-box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
   -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
   box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
+}
+#main-container {
+  position: absolute;
+  left: 80px;
+  top: 80px;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+.main-section-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.main-section-wrapper .section-header {
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+  border-bottom: 1px solid #eeeeee;
+}
+.main-section-wrapper .section-header .this-title {
+  padding: 0 15px;
+  width: 200px;
+  height: 80px;
+  float: left;
+}
+.main-section-wrapper .section-header .this-title h3 {
+  margin-bottom: 0 !important;
+  width: 100%;
+  font-size: 20px;
+  color: #ef6c00;
+}
+.main-section-wrapper .section-header .this-title h6 {
+  margin-top: 5px !important;
+  font-size: 12px;
+  color: #555555;
+  font-weight: 300;
+}
+.main-section-wrapper .section-header .help-module {
+  width: 100px;
+  height: 80px;
+  float: left;
+  position: relative;
+}
+.main-section-wrapper .context-menu-trigger {
+  width: 220px;
+  height: 80px;
+  float: right;
+  border-left: 1px solid #eeeeee;
+}
+.main-section-wrapper .section-content {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

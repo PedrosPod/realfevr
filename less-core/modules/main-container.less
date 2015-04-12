@@ -1,0 +1,93 @@
+#main-container
+{
+  // Position
+  position: absolute;
+  left: @header-h;
+  top: @header-h;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.main-section-wrapper
+{
+  @section-header-h: 80px;
+  // Box
+  // Position
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  // Header for inner pages
+  .section-header
+  {
+    // Box
+    height: @section-header-h;
+    width: 100%;
+    // Position
+    position: absolute;
+    top: 0; right: 0; left: 0;
+    // Style
+    background: #fff;
+    border-bottom: 1px solid @gray-lighter;
+    .this-title
+    {
+      // Box
+      padding: 0 15px;
+      width: 200px;
+      height: @section-header-h;
+      // Position
+      float: left;
+      h3
+      {
+        // Box
+        margin-bottom: 0 !important;
+        width: 100%;
+        //
+        // Type
+        font-size: 20px;
+        color: @brand-primary;
+      }
+      h6
+      {
+        // Box
+        margin-top: 5px !important;
+        // Type
+        font-size: 12px;
+        color: @gray;
+        font-weight: 300;
+      }
+    }
+    .help-module
+    {
+      // Box
+      width: 100px;
+      height: @section-header-h;
+      // Position
+      float: left;
+      position: relative;
+    }
+    }
+
+  .context-menu-trigger
+  {
+    // Box
+    width: 220px;
+    height: @section-header-h;
+    // Position
+    float: right;
+    // Style
+    border-left: 1px solid @gray-lighter;
+
+  }
+
+  .section-content
+  {
+    // Position
+    position: absolute;
+    top: @section-header-h;
+    left: 0; right:0; bottom: 0;
+
+    // Style
+
+  }
+
+}

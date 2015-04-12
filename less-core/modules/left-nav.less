@@ -6,7 +6,7 @@
   // Position
   position: absolute;
   top: @header-h; left: 0; bottom: 0;
-
+  z-index: 1;
   // Style
   background: @gray-darker;
 
@@ -24,9 +24,14 @@
       position: relative;
       float: left;
 
+      & > a,
       & > button
       {
         overflow: hidden;
+        display: block;
+        width: 100%; height: 100%;
+        position: relative;
+
         .area-title
         {
           // Box
@@ -74,11 +79,11 @@
 
       }
 
-      &:hover,
-      &.is-active
+      &:hover
       {
-        & > button
+        & > a
         {
+          text-decoration: none;
           .area-title
           {
             // Type
@@ -102,14 +107,14 @@
         }
         &.home
         {
-          & > button
+          & > a
           {
             background: @gray;
           }
         }
         &.league
         {
-          & > button
+          & > a
           {
             background: @section-league;
           }
@@ -127,7 +132,7 @@
         }
         &.team
         {
-          & > button
+          & > a
           {
             background: @section-team;
           }
@@ -146,7 +151,7 @@
         }
         &.players
         {
-          & > button
+          & > a
           {
             background: @section-players;
           }
@@ -164,7 +169,7 @@
         }
         &.calendar
         {
-          & > button
+          & > a
           {
             background: @section-calendar;
           }
@@ -191,7 +196,7 @@
     {
       padding: 0;
       width: 800px;
-      //display: none;
+      display: block;
       visibility: hidden;
       // Position
       position: absolute;
@@ -234,11 +239,11 @@
       }
     }
 
-    &:hover,
-    &.is-active
+    &:hover
     {
       .this-submenu
       {
+        z-index: 1;
         visibility: visible;
         .translateY(0);
         .opacity(1);
