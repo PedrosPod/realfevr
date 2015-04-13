@@ -572,3 +572,89 @@ input[type="checkbox"] {
     }
   }
 }
+.checkbox-flat
+{
+  .this-label
+  {
+    font-size: 12px;
+    font-weight: 500;
+    color: @gray;
+    //margin-top: 5px;
+    display: inline-block;
+  }
+
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 75px;
+    cursor: pointer;
+  }
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before,
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+  }
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    left:0; top: -3px;
+    width: 65px; height: 30px;
+    background: @gray-lighter;
+    border-radius: 15px;
+    transition: background-color .2s;
+  }
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    width: 20px; height: 20px;
+    transition: all .2s;
+    border-radius: 50%;
+    background: @gray-light;
+    top: 2px; left: 5px;
+  }
+
+  /* on checked */
+  [type="checkbox"]:checked + label:before {
+    background:@brand-info;
+
+  }
+  [type="checkbox"]:checked + label:after {
+    background: #fff;
+    top: 2px; left: 40px;
+  }
+
+  [type="checkbox"]:checked + label .ui,
+  [type="checkbox"]:not(:checked) + label .ui:before,
+  [type="checkbox"]:checked + label .ui:after {
+    position: absolute;
+    left: 6px;
+    width: 65px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 26px;
+    transition: all .2s;
+    font-family: @font-headings;
+  }
+  [type="checkbox"]:not(:checked) + label .ui:before {
+    content: "No";
+    left: 38px;
+    color: @gray-light;
+    text-transform: uppercase;
+  }
+  [type="checkbox"]:checked + label .ui:after {
+    content: "Yes";
+    text-transform: uppercase;
+    color: #fff;
+  }
+  [type="checkbox"]:focus + label:before {
+    border: 0px;
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+}

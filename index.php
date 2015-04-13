@@ -6,8 +6,8 @@
 
     <!-- RealFevr Base CSS -->
     <link href="css/unifier.css" rel="stylesheet">
-    <link href="fonts/museo/stylesheet.css" rel="stylesheet">
-    <link href="fonts/museo-sans/stylesheet.css" rel="stylesheet">
+    <link href="css/google-fonts.css" rel="stylesheet">
+
 
 
 </head>
@@ -22,8 +22,8 @@
      <?php include('includes/left-nav.htm'); ?>
 
     <!-- Main Content -->
-    <section class="main-container" id="main-container">
-        <?php include('pages/home.html'); ?>
+    <section class="main-container" id="main-content">
+        <?php include('views/pageHome.htm'); ?>
     </section>
 
     <?php include('includes/footer.htm'); ?>

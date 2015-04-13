@@ -1,4 +1,5 @@
 @import "../assembler.less";
+
 .global-wrapper
 {
   position: absolute;
@@ -62,4 +63,23 @@
     font-weight: 600;
     color: white;
   }
+}
+
+
+// Alignments
+.align-v
+{
+  position: relative;
+  top: 50%;
+  .translateY(-50%);
+}
+
+// Transitions
+.transition-normal()
+{
+  .transition(~"all .25s cubic-bezier(.4,0,.2,1)");
+}
+.transition-long()
+{
+  .transition(~"all .4s cubic-bezier(.4,0,.2,1)");
 }

@@ -1,59 +1,72 @@
-// Full Width Left Nav sub-menu
+// Global functions
+function uniqId() {
+    return Math.round(new Date().getTime() + (Math.random() * 100));
+}
 
+
+// Full Width Left Nav sub-menu
 function leftNavStretch() {
     var windowWidth = $(window).width() - 80;
     $('[data-area="main-navigation"] .this-submenu').css('width', windowWidth);
 }
 
-function showHideElem() {
+// TRIGGER > WIDGET : Show Hide relationship
+function triggerShowWidget() {
 
-    function uniqId() {
-        return Math.round(new Date().getTime() + (Math.random() * 100));
-    }
+    var appWidgets = $('[data-widget]');
+    var appTriggers = $('[data-trigger]');
 
-    $('[data-toggle="showHideElem"]').on('click', function (ev) {
+    $('[data-floater]').on('click',function(ev){
 
         ev.preventDefault();
+        var thisTrigger = $(this);
+        var thisTriggerName = thisTrigger.attr('data-trigger');
+        var thatWidget = $('[data-widget="' + thisTriggerName + '"]');
 
-        var thisTrigger = $(this),
-            thisTriggerVal = $(this).data("trigger"),
-            theseTriggers = $('[data-trigger="' + thisTriggerVal + '"]'),
-            thatWidget = $('[data-widget="' + thisTriggerVal + '"]');
-
-        // Add active and visible state to selected trigger and widget
-        if (thisTrigger.hasClass('is-active')) {
-            theseTriggers.removeClass('is-active');
-            thatWidget.removeClass('is-visible');
-            thatWidget.removeAttr('id');
+        if(thisTrigger.hasClass('is-active'))
+        {
+            appWidgets.removeClass('is-visible').removeAttr('id');
+            appTriggers.removeClass('is-active');
         }
-        else {
-            // hide all
-            $('[data-toggle="showHideElem"]').removeClass('is-active');
-            $('[data-widget]').removeClass('is-visible');
-
-            // show this and give custom ID
-            theseTriggers.addClass('is-active');
+        else
+        {
+            appTriggers.removeClass('is-active');
+            appWidgets.removeClass('is-visible');
+            thisTrigger.addClass('is-active');
             thatWidget.addClass('is-visible');
-            thatWidget.attr('id', 'gs-' + uniqId());
+            var thisId = 'bs' + uniqId();
+
+            thatWidget.attr('id', thisId);
+            thisTrigger.attr('id', thisId);
+
 
             // bind clickout function
             $(document).mouseup(function (clickOut) {
-
                 if (clickOut.target.id !== thatWidget.attr('id') && !thatWidget.has(clickOut.target).length) {
+
                     thisTrigger.removeClass('is-active');
                     thatWidget.removeClass('is-visible');
                     thatWidget.removeAttr('id');
+
                     $(this).unbind(clickOut);
                 }
             });
-
         }
     });
+    $('[data-trigger="close-panels"]').on('click', function(){
+        appWidgets.removeClass('is-visible').removeAttr('id');
+        appTriggers.removeClass('is-active');
+
+    });
+
 }
 
+
+
+// On Document ready Loads
 $( document ).ready( function(){
 
     leftNavStretch();
-
+    triggerShowWidget();
 
 });
