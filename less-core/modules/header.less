@@ -63,6 +63,7 @@
     {
       // Position
       float: left;
+      position: relative;
       // Style
       list-style: none;
 
@@ -123,6 +124,16 @@
             {
               fill: @gray;
             }
+          }
+        }
+
+        &.is-active
+        {
+          background: @gray-lighter;
+          .this-counter
+          {
+            background: @gray-light;
+            border-color: @gray-lighter;
           }
         }
 

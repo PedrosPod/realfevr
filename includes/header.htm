@@ -8,7 +8,7 @@
 
     <ul class="user-menu">
         <li>
-            <button class="this-option">
+            <button class="this-option" data-trigger="header-help" data-floater="header-help">
                     <span class="ico size--24px centered">
                         <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
                             <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
@@ -23,9 +23,19 @@
                         </svg>
                     </span>
             </button>
+            <div class="floating-bubble" data-widget="header-help">
+                <div class="this-header">
+                    <span class="this-title">Ajuda e informação</span>
+
+                </div>
+
+                <div class="this-body">
+
+                </div>
+            </div>
         </li>
         <li>
-            <button class="this-option high-l">
+            <button class="this-option high-l" data-trigger="header-messages" data-floater="header-messages">
 
                     <span class="ico size--24px centered">
                         <span class="this-counter">8</span>
@@ -42,9 +52,19 @@
                         </svg>
                     </span>
             </button>
+            <div class="floating-bubble" data-widget="header-messages">
+                <div class="this-header">
+                    <span class="this-title">Mensagens</span>
+                    <span class="this-counter">8</span>
+                </div>
+
+                <div class="this-body">
+
+                </div>
+            </div>
         </li>
         <li>
-            <button class="this-option high-l">
+            <button class="this-option high-l" data-trigger="header-notifications" data-floater="header-notifications">
                     <span class="ico size--24px centered">
                         <span class="this-counter">8</span>
                         <svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
@@ -60,11 +80,23 @@
                         </svg>
                     </span>
             </button>
+            <div class="floating-bubble" data-widget="header-notifications">
+                <div class="this-header">
+                    <span class="this-title">Notificações</span>
+                    <span class="this-counter">8</span>
+                </div>
+
+                <div class="this-body">
+
+                </div>
+            </div>
         </li>
         <li>
             <button class="this-option user-avatar">
                 <img src="img/user-avatar.png" alt="" class="img-circle"/>
             </button>
+
+
         </li>
 
     </ul>

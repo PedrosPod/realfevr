@@ -1,0 +1,46 @@
+.add-xl
+{
+  // Box
+  width: 100%;
+  height: 350px;
+  // Position
+  position: relative;
+
+  // Style
+  .opacity(.5);
+  background: rgba(0,0,0,.5);
+  border: none;
+
+  svg
+  {
+    // Box
+    width: 80px; height: 80px;
+    // Position
+    position: absolute;
+    top: 50%; left: 50%;
+    margin: -100px 0 0 -40px;
+    // Style
+    fill: white;
+  }
+  .this-label
+  {
+    // Box
+    width: 100%;
+    // Position
+    position: absolute;
+    bottom: 25%; left: 0;
+    // Type
+    font-size: 12px;
+    font-family: @font-headings ;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+  &:hover
+  {
+    .opacity(1);
+    cursor: pointer;
+  }
+}

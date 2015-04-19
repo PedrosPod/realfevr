@@ -1,0 +1,88 @@
+.league-card
+{
+  // Box
+  width: 260px;
+  height: 350px;
+  margin: 0 auto 30px;
+  // Style
+  .transition-normal();
+  .box-shadow(~"0px 5px 10px 0px rgba(0,0,0,0.40)");
+
+  .league-summary
+  {
+    // Box
+    width: 100%;
+    height: 250px;
+    
+    // Style
+    background: #000;
+
+    .league-bg
+    {
+      position: relative;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img
+      {
+        position: absolute;
+        top:0; left: 0;
+        height: 100%;
+      }
+    }
+  }
+  .team-summary
+  {
+    // Box
+    width: 100%;
+    height: 100px;
+    
+    // Style
+    background: #fff;
+    
+  }
+
+  &:hover
+  {
+    .box-shadow(~"0 18px 36px rgba(0,0,0,15)");
+    .translateY(-5px);
+  }
+
+  &.add
+  {
+    background: rgba(0,0,0,.25);
+    .box-shadow(~"none");
+
+    svg
+    {
+      width: 60px;
+      height: 60px;
+      // Position
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      margin-left: -30px;
+      // Style
+      fill: rgba(255,255,255,.5);
+    }
+    .this-label
+    {
+      position: absolute;
+      bottom: 30%;
+      left: 50%;
+      .translateX(-50%);
+
+      // Type
+      font-size: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    &:hover
+    {
+      .translateY(0);
+    }
+  }
+}

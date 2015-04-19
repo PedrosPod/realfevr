@@ -1,4 +1,4 @@
-#main-container
+#main-content
 {
   // Position
   position: absolute;
@@ -31,11 +31,14 @@
     .this-title
     {
       // Box
-      padding: 0 15px;
-      width: 200px;
+      padding: 0 15px 0 30px;
+      margin-right: 15px;
+      width: 250px;
       height: @section-header-h;
       // Position
       float: left;
+      // Style
+      border-right: 1px solid @gray-lighter;
       h3
       {
         // Box
@@ -43,8 +46,10 @@
         width: 100%;
         //
         // Type
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 600;
         color: @brand-primary;
+
       }
       h6
       {
@@ -109,6 +114,9 @@
 
   .section-content
   {
+    // Box
+    overflow: hidden;
+    overflow-y: auto;
     // Position
     position: absolute;
     top: @section-header-h;
