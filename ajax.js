@@ -1,13 +1,13 @@
 $(function() {
 
-    $('.nav-options li a').click(function() {
+    $('.nav-options .option-item .this-trigger').click(function() {
         var $linkClicked = $(this).attr('href');
         document.location.hash = $linkClicked;
         var $pageRoot = $linkClicked.replace('#page', '');
 
-        if (!$(this).parent().hasClass("active")) {
-            $(".nav-options li a").parent().removeClass("active");
-            $(this).parent().addClass("active");
+        if (!$(this).hasClass("active")) {
+            $(".nav-options li .this-trigger").parent().removeClass("is-active");
+            $(this).parent().addClass("is-active");
             $.ajax({
                 type: "POST",
                 url: "load.php",
@@ -15,7 +15,7 @@ $(function() {
                 dataType: "html",
                 success: function(msg){
 
-                    if(parseInt(msg)!=0)
+                    if(parseInt(msg)!==0)
                     {
                         $('#main-content').html(msg);
                         $('#main-content section').hide().fadeIn();

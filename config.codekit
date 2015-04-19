@@ -76,20 +76,132 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/css\/google-fonts.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/google-fonts.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/css\/unifier.css": {
 		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/unifier.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo1\/css\/reset.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo1\/css\/reset.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo1\/css\/styles.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo1\/css\/styles.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo1\/custom.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo1\/custom.js",
+		"outputAbbreviatedPath": "\/demo1\/min\/custom-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/demo1\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo1\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo2\/css\/reset.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo2\/css\/reset.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo2\/css\/styles.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo2\/css\/styles.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo2\/custom.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo2\/custom.js",
+		"outputAbbreviatedPath": "\/demo2\/min\/custom-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/demo2\/index.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo2\/index.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo2\/load.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo2\/load.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo2\/pages\/page1.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo2\/pages\/page1.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo2\/pages\/page2.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo2\/pages\/page2.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo2\/pages\/page3.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo2\/pages\/page3.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/demo2\/pages\/page4.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/demo2\/pages\/page4.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -241,17 +353,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/img\/bgs\/home.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9.97196e+06,
-		"inputAbbreviatedPath": "\/img\/bgs\/home.png",
-		"outputAbbreviatedPath": "\/img\/bgs\/home.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/img\/user-avatar.png": {
 		"fileType": 32768,
@@ -1824,15 +1925,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/less-core\/css\/pages-custom.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less-core\/css\/pages-custom.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/less-core\/lesshat-prefixed.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -1863,26 +1955,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/less-core\/lesshat.less",
 		"outputAbbreviatedPath": "\/css\/lesshat.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"relativeURLS": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"strictImports": 0,
-		"strictMath": 0,
-		"strictUnits": 0
-		},
-	"\/less-core\/modules\/global-ui.less": {
-		"allowInsecureImports": 0,
-		"createSourceMap": 0,
-		"disableJavascript": 0,
-		"fileType": 1,
-		"ieCompatibility": 1,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less-core\/modules\/global-ui.less",
-		"outputAbbreviatedPath": "\/less-core\/css\/global-ui.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1973,26 +2045,6 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less-core\/modules\/pages-custom.less": {
-		"allowInsecureImports": 0,
-		"createSourceMap": 0,
-		"disableJavascript": 0,
-		"fileType": 1,
-		"ieCompatibility": 1,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less-core\/modules\/pages-custom.less",
-		"outputAbbreviatedPath": "\/less-core\/css\/pages-custom.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"relativeURLS": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"strictImports": 0,
-		"strictMath": 0,
-		"strictUnits": 0
-		},
 	"\/less-core\/unifier.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -2033,47 +2085,56 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/views\/page1.htm": {
+	"\/pages\/home.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/page1.htm",
+		"inputAbbreviatedPath": "\/pages\/home.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/page2.htm": {
+	"\/pages\/page1.htm": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/page2.htm",
+		"inputAbbreviatedPath": "\/pages\/page1.htm",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/page3.htm": {
+	"\/pages\/page2.htm": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/page3.htm",
+		"inputAbbreviatedPath": "\/pages\/page2.htm",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/page4.htm": {
+	"\/pages\/page3.htm": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/page4.htm",
+		"inputAbbreviatedPath": "\/pages\/page3.htm",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/pageHome.htm": {
+	"\/pages\/page4.htm": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/pageHome.htm",
+		"inputAbbreviatedPath": "\/pages\/page4.htm",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/views\/home.htm": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/views\/home.htm",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
