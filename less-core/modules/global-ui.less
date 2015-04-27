@@ -1,22 +1,21 @@
 // Floating bubble menu
-.floating-bubble
-{
+.floating-bubble {
   @header-h: 50px;
   // Box
-  width: 200px;
+  width: 250px;
   // Position
   position: absolute;
-  top: 100%; right: 15px;
+  top: 100%;
+  right: 15px;
   .translateY(15px);
   z-index: -1;
   // Style
-  outline: 4px solid rgba(0,0,0,.03);
+  outline: 4px solid rgba(0, 0, 0, .03);
   .opacity(0);
   background: #FFFFFF;
   .transition-normal();
 
-  .this-header
-  {
+  .this-header {
     // Box
     width: 100%;
     height: @header-h;
@@ -41,8 +40,7 @@
       border-width: 6px;
       margin-left: -30px;
     }
-    .this-title
-    {
+    .this-title {
       // Position
       float: left;
       position: relative;
@@ -54,8 +52,7 @@
       font-weight: 600;
       font-size: 14px;
     }
-    .this-counter
-    {
+    .this-counter {
       // Box
       padding: 0px 8px;
       height: 24px;
@@ -71,18 +68,16 @@
       // Type
       font-weight: 700;
       font-size: 14px;
-      line-height:24px;
+      line-height: 24px;
     }
   }
-  .this-body
-  {
+  .this-body {
     // Box
     min-height: 100px;
   }
-  
+
   // Is active state
-  &.is-visible
-  {
+  &.is-visible {
     // Box
     .opacity(1);
     // Position
@@ -90,5 +85,268 @@
     z-index: 1;
     // Style
     .box-shadow(~"0px 15px 12px 0px rgba(0,0,0,0.22), 0px 19px 39px 0px rgba(0,0,0,0.30)");
+  }
+  // For inner lists of messages, notifications, alerts ...
+  .message-list {
+    // Box
+    padding: 0;
+
+    // Style
+    list-style: none;
+
+    li {
+      // Box
+      width: 100%;
+      padding: 15px 15px;
+      // Position
+      float: left;
+      position: relative;
+      // Style
+      border-bottom: 1px solid @gray-lighter;
+      &:nth-child(3) {
+        border-bottom: 0;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      .info {
+        width: 100%;
+        float: left;
+        margin-bottom: 15px;
+        color: @gray-light;
+        font-size: 12px;
+        font-weight: 500;
+        .icon
+        {
+          width: 20px; height: 20px;
+          float: left;
+          .opacity(.25);
+        }
+      }
+      .date {
+        // Position
+        float: right;
+        // Type
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .from {
+        // Positin
+        float: left;
+
+      }
+      .msg-copy {
+        display: block;
+        width: 100%;
+        // Position
+        float: left;
+        // Type
+        font-size: 12px;
+        line-height: 1.2;
+        color: @gray-light;
+      }
+      .msg-entry
+      {
+
+      }
+      &.new-message {
+        .box-shadow(~"inset 3px 0 0 @{brand-info}");
+        .info {
+          font-weight: 700;
+          color: @text-color;
+          .icon
+          {
+            .opacity(1);
+
+          }
+        }
+        .msg-copy {
+          font-weight: 500;
+          color: @text-color;
+        }
+      }
+      &.see-all-container {
+        background: #eee url("/img/bg-more-msg.svg") repeat-x top left;
+
+      }
+      // Button to show all remaining messages
+      .see-all-btn {
+        width: 100%;
+        // Style
+        border: 0;
+        background: none;
+        // Type
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: @gray-light;
+      }
+    }
+    &.notifications
+    {
+     .msg-entry
+     {
+        .info
+        {
+
+        }
+       &.new-message
+       {
+         .info
+         {
+
+         }
+       }
+     }
+    }
+    .click-wrapper
+    {
+      // Box
+      display: block;
+      // Type
+      text-decoration: none;
+    }
+  }
+  // For inner list of options
+  .option-list
+  {
+    // Box
+    padding: 0;
+    width: 100%;
+    display: block;
+    // Position
+    // Style
+    list-style: none;
+    .option-item
+    {
+      // Box
+      display: block;
+      width: 100%;
+
+      & > button
+      {
+        // Box
+        width: 100%;
+        height: 60px;
+        padding-left: 50px;
+        // Position
+        position: relative;
+        // Style
+        background: none;
+        border: 0;
+        border-bottom: 1px solid @gray-lighter;
+        // Type
+        font-weight: 600;
+        color: @gray;
+        line-height: 60px;
+        &:hover
+        {
+          background: @gray-lighter;
+        }
+        .icon
+        {
+          // Box
+          width: 20px; height: 20px;
+          // Position
+          position: absolute;
+          top: 50%; left: 15px;
+          margin-top: -10px;
+          // Type
+          line-height: 1;
+          svg
+          {
+            width: 20px; height: 20px;
+            fill: @gray-light;
+          }
+        }
+      }
+    }
+  }
+  // Profile specific customization
+  &.header-profile
+  {
+    width: 500px;
+    .this-header
+    {
+      background: #fff;
+      height: 30px;
+      &:after
+      {
+        border-bottom-color: #fff;
+      }
+    }
+    .this-body
+    {
+      padding-left: 120px;
+      padding-bottom: 70px;
+      position: relative;
+    }
+    .user-avatar
+    {
+      // Box
+      width: 80px; height: 80px;
+      overflow: hidden;
+      // Position
+      position: absolute;
+      left: 15px; top: 0px;
+      // Style
+      .border-radius(80px)
+    }
+    .user-info
+    {
+      .user-name
+      {
+        // Box
+        width: 100%;
+        display: block;
+        // Type
+        font-size: 18px;
+        font-weight: 500;
+        font-family: @font-headings;
+      }
+      .user-email
+      {
+        // Box
+        width: 100%;
+        display: block;
+        margin-bottom: 15px;
+        // Type
+        font-size: 12px;
+        color: @gray-light;
+      }
+      & > a
+      {
+        // Box
+        display: inline-block;
+        margin-right: 30px;
+        // Type
+        color: @brand-info;
+        font-size: 14px;
+
+      }
+    }
+    .log-out-account
+    {
+      // Box
+      width: 100%;
+      height: 50px;
+      // Position
+      position: absolute;
+      bottom: 0; left: 0;
+      // Style
+      border: 0;
+      background: @gray-lighter;
+      // Type
+      color: @gray-light;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 50px;
+      &:hover
+      {
+        background: @brand-danger;
+        color: white;
+      }
+    }
   }
 }

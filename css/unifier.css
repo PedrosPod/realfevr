@@ -6864,6 +6864,9 @@ button.close {
 .main-header .user-menu > li .this-option.high-l .ico svg {
   fill: #555555;
 }
+.main-header .user-menu > li .this-option[data-trigger="header-notifications"] .this-counter {
+  background: #d9534f;
+}
 .main-header .user-menu > li .this-option.is-active {
   background: #eeeeee;
 }
@@ -7168,7 +7171,7 @@ button.close {
   bottom: 0;
 }
 .floating-bubble {
-  width: 200px;
+  width: 250px;
   position: absolute;
   top: 100%;
   right: 15px;
@@ -7267,6 +7270,199 @@ button.close {
   -webkit-box-shadow: 0px 15px 12px 0px rgba(0,0,0,0.22), 0px 19px 39px 0px rgba(0,0,0,0.30);
   box-shadow: 0px 15px 12px 0px rgba(0,0,0,0.22), 0px 19px 39px 0px rgba(0,0,0,0.30);
 }
+.floating-bubble .message-list {
+  padding: 0;
+  list-style: none;
+}
+.floating-bubble .message-list li {
+  width: 100%;
+  padding: 15px 15px;
+  float: left;
+  position: relative;
+  border-bottom: 1px solid #eeeeee;
+}
+.floating-bubble .message-list li:nth-child(3) {
+  border-bottom: 0;
+}
+.floating-bubble .message-list li:last-child {
+  border-bottom: 0;
+}
+.floating-bubble .message-list li .info {
+  width: 100%;
+  float: left;
+  margin-bottom: 15px;
+  color: #a6a6a6;
+  font-size: 12px;
+  font-weight: 500;
+}
+.floating-bubble .message-list li .info .icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  zoom: 1;
+  -webkit-opacity: 0.25;
+  -moz-opacity: 0.25;
+  opacity: 0.25;
+  filter: alpha(opacity=25);
+}
+.floating-bubble .message-list li .date {
+  float: right;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.floating-bubble .message-list li .from {
+  float: left;
+}
+.floating-bubble .message-list li .msg-copy {
+  display: block;
+  width: 100%;
+  float: left;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #a6a6a6;
+}
+.floating-bubble .message-list li.new-message {
+  -moz-box-shadow: inset 3px 0 0 #0090e9;
+  -webkit-box-shadow: inset 3px 0 0 #0090e9;
+  box-shadow: inset 3px 0 0 #0090e9;
+}
+.floating-bubble .message-list li.new-message .info {
+  font-weight: 700;
+  color: #333333;
+}
+.floating-bubble .message-list li.new-message .info .icon {
+  zoom: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.floating-bubble .message-list li.new-message .msg-copy {
+  font-weight: 500;
+  color: #333333;
+}
+.floating-bubble .message-list li.see-all-container {
+  background: #eeeeee url("/img/bg-more-msg.svg") repeat-x top left;
+}
+.floating-bubble .message-list li .see-all-btn {
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #a6a6a6;
+}
+.floating-bubble .message-list .click-wrapper {
+  display: block;
+  text-decoration: none;
+}
+.floating-bubble .option-list {
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+.floating-bubble .option-list .option-item {
+  display: block;
+  width: 100%;
+}
+.floating-bubble .option-list .option-item > button {
+  width: 100%;
+  height: 60px;
+  padding-left: 50px;
+  position: relative;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+  font-weight: 600;
+  color: #555555;
+  line-height: 60px;
+}
+.floating-bubble .option-list .option-item > button:hover {
+  background: #eeeeee;
+}
+.floating-bubble .option-list .option-item > button .icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -10px;
+  line-height: 1;
+}
+.floating-bubble .option-list .option-item > button .icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #a6a6a6;
+}
+.floating-bubble.header-profile {
+  width: 500px;
+}
+.floating-bubble.header-profile .this-header {
+  background: #fff;
+  height: 30px;
+}
+.floating-bubble.header-profile .this-header:after {
+  border-bottom-color: #fff;
+}
+.floating-bubble.header-profile .this-body {
+  padding-left: 120px;
+  padding-bottom: 70px;
+  position: relative;
+}
+.floating-bubble.header-profile .user-avatar {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  position: absolute;
+  left: 15px;
+  top: 0px;
+  -webkit-border-radius: 80px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 80px;
+  -moz-background-clip: padding;
+  border-radius: 80px;
+  background-clip: padding-box;
+}
+.floating-bubble.header-profile .user-info .user-name {
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.floating-bubble.header-profile .user-info .user-email {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #a6a6a6;
+}
+.floating-bubble.header-profile .user-info > a {
+  display: inline-block;
+  margin-right: 30px;
+  color: #0090e9;
+  font-size: 14px;
+}
+.floating-bubble.header-profile .log-out-account {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 0;
+  background: #eeeeee;
+  color: #a6a6a6;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 50px;
+}
+.floating-bubble.header-profile .log-out-account:hover {
+  background: #d9534f;
+  color: white;
+}
 [data-page="home"] {
   background: url("../img/bgs/home.jpg") no-repeat;
   background-size: cover;
@@ -7294,7 +7490,7 @@ button.close {
 }
 .league-card {
   width: 260px;
-  height: 350px;
+  height: 380px;
   margin: 0 auto 30px;
   -moz-transition: all .25s cubic-bezier(.4,0,.2,1);
   -webkit-transition: all .25s cubic-bezier(.4,0,.2,1);
@@ -7303,10 +7499,12 @@ button.close {
   -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.40);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.40);
   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.40);
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .league-card .league-summary {
   width: 100%;
   height: 250px;
+  position: relative;
   background: #000;
 }
 .league-card .league-summary .league-bg {
@@ -7322,20 +7520,259 @@ button.close {
   left: 0;
   height: 100%;
 }
+.league-card .league-summary .league-bg:after {
+  display: block;
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  content: '';
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYigwLDAsMCkiIHN0b3Atb3BhY2l0eT0iMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiKDAsMCwwKSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+  background-image: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+}
+.league-card .league-summary .this-summary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.league-card .league-summary .league-type {
+  height: 20px;
+  width: 50%;
+  padding: 0 6px;
+  margin: 30px 25% 0 ;
+  position: relative;
+  display: block;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.85);
+  -webkit-border-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 20px;
+  -moz-background-clip: padding;
+  border-radius: 20px;
+  background-clip: padding-box;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.league-card .league-summary .league-name {
+  width: 100%;
+  padding: 0 30px;
+  display: block;
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+}
+.league-card .league-summary .league-lastGame {
+  width: 100%;
+  margin-top: 30px;
+  float: left;
+}
+.league-card .league-summary .league-lastGame .this-label {
+  width: 100%;
+  margin-bottom: 10px;
+  display: block;
+  clear: both;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 11px;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.league-card .league-summary .league-lastGame .teams {
+  width: 50%;
+  height: 30px;
+  padding: 0 10px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  font-size: 11px;
+  font-weight: 500;
+  color: white;
+  line-height: 30px;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.league-card .league-summary .league-lastGame .teams em {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  -webkit-border-radius: 30px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 30px;
+  -moz-background-clip: padding;
+  border-radius: 30px;
+  background-clip: padding-box;
+  background: white;
+  text-align: center;
+  font-weight: 600;
+  color: black;
+  font-style: normal;
+}
+.league-card .league-summary .league-lastGame .teams.win em {
+  background: #5cb85c;
+  color: white;
+}
+.league-card .league-summary .league-lastGame .teams.lost em {
+  background: #d9534f;
+  color: white;
+}
+.league-card .league-summary .league-lastGame .home-team {
+  text-align: right;
+  padding-right: 40px;
+}
+.league-card .league-summary .league-lastGame .home-team em {
+  right: 5px;
+}
+.league-card .league-summary .league-lastGame .visiting-team {
+  text-align: left;
+  padding-left: 40px;
+}
+.league-card .league-summary .league-lastGame .visiting-team em {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  left: 5px;
+}
 .league-card .team-summary {
   width: 100%;
-  height: 100px;
+  height: 130px;
   background: #fff;
 }
+.league-card .team-summary .your-team {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  padding: 15px 15px 0;
+  float: left;
+}
+.league-card .team-summary .your-team .team-name {
+  max-width: 100%;
+  margin-top: 15px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+}
+.league-card .team-summary .your-team .team-name:after {
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: '';
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYigyNTUsIDI1NSwgMjU1KSIgc3RvcC1vcGFjaXR5PSIwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjbGVzc2hhdC1nZW5lcmF0ZWQpIiAvPjwvc3ZnPg==);
+  background-image: linear-gradent(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background-image: linear-gradent(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+}
+.league-card .team-summary .your-team .team-pos {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: -25px;
+  right: 15px;
+  -webkit-border-radius: 40px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 40px;
+  -moz-background-clip: padding;
+  border-radius: 40px;
+  background-clip: padding-box;
+  background: #ef6c00;
+  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
+  box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
+  -moz-transition: all .25s cubic-bezier(.4,0,.2,1);
+  -webkit-transition: all .25s cubic-bezier(.4,0,.2,1);
+  -o-transition: all .25s cubic-bezier(.4,0,.2,1);
+  transition: all .25s cubic-bezier(.4,0,.2,1);
+  text-align: center;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 20px;
+  color: #fff;
+}
+.league-card .team-summary .your-team .team-points {
+  width: 100%;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #a6a6a6;
+  text-align: left;
+}
+.league-card .team-summary .league-status {
+  padding: 0;
+  width: 100%;
+  float: left;
+  height: 40px;
+  margin-top: 30px;
+  list-style-type: none;
+  text-align: center;
+}
+.league-card .team-summary .league-status li {
+  display: inline-block;
+  margin-top: 0px;
+  padding: 0 5px;
+}
+.league-card .team-summary .league-status li .circle-val {
+  width: 30px;
+  height: 30px;
+  display: block;
+  border: 1px solid #555555;
+  -webkit-border-radius: 30px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 30px;
+  -moz-background-clip: padding;
+  border-radius: 30px;
+  background-clip: padding-box;
+  line-height: 29px;
+  font-weight: 600;
+}
+.league-card .team-summary .league-status li.wins .circle-val {
+  border-color: #5cb85c;
+  color: #5cb85c;
+}
+.league-card .team-summary .league-status li.draws .circle-val {
+  border-color: #a6a6a6;
+  color: #a6a6a6;
+}
+.league-card .team-summary .league-status li.defeat .circle-val {
+  border-color: #d9534f;
+  color: #d9534f;
+}
 .league-card:hover {
-  -moz-box-shadow: 0 18px 36px rgba(0,0,0,15);
-  -webkit-box-shadow: 0 18px 36px rgba(0,0,0,15);
-  box-shadow: 0 18px 36px rgba(0,0,0,15);
+  cursor: pointer;
+  -moz-box-shadow: 0 18px 36px rgba(0,0,0,.4);
+  -webkit-box-shadow: 0 18px 36px rgba(0,0,0,.4);
+  box-shadow: 0 18px 36px rgba(0,0,0,.4);
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(-5px);
   -o-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   transform: translateY(-5px);
+}
+.league-card:hover .your-team .team-pos {
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.12);
+  box-shadow: 0 1px 3px rgba(0,0,0,.12);
 }
 .league-card.add {
   background: rgba(0, 0, 0, 0.25);
@@ -7373,8 +7810,9 @@ button.close {
   transform: translateY(0);
 }
 .add-xl {
-  width: 100%;
-  height: 350px;
+  width: 260px;
+  height: 380px;
+  margin: 0 auto;
   position: relative;
   zoom: 1;
   -webkit-opacity: 0.5;
