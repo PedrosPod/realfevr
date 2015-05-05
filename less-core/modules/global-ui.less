@@ -229,7 +229,8 @@
         // Box
         width: 100%;
         height: 60px;
-        padding-left: 50px;
+        padding-right: 50px;
+        padding-left: 30px;
         // Position
         position: relative;
         // Style
@@ -238,8 +239,11 @@
         border-bottom: 1px solid @gray-lighter;
         // Type
         font-weight: 600;
+        font-size: 12px;
         color: @gray;
         line-height: 60px;
+        text-transform: uppercase;
+        font-family: @font-headings;
         &:hover
         {
           background: @gray-lighter;
@@ -250,14 +254,14 @@
           width: 20px; height: 20px;
           // Position
           position: absolute;
-          top: 50%; left: 15px;
+          top: 50%; right: 15px;
           margin-top: -10px;
           // Type
           line-height: 1;
-          svg
+          img
           {
             width: 20px; height: 20px;
-            fill: @gray-light;
+           .opacity(.25);
           }
         }
       }
