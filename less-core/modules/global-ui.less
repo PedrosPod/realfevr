@@ -12,6 +12,7 @@
   // Style
   outline: 4px solid rgba(0, 0, 0, .03);
   .opacity(0);
+  visibility: hidden;
   background: #FFFFFF;
   .transition-normal();
 
@@ -84,6 +85,7 @@
     .translateY(0px);
     z-index: 1;
     // Style
+    visibility: visible;
     .box-shadow(~"0px 15px 12px 0px rgba(0,0,0,0.22), 0px 19px 39px 0px rgba(0,0,0,0.30)");
   }
   // For inner lists of messages, notifications, alerts ...
@@ -127,9 +129,8 @@
         // Position
         float: right;
         // Type
-        font-size: 10px;
-        font-weight: 700;
-        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
       }
       .from {
         // Positin
@@ -161,13 +162,14 @@
 
           }
         }
+        .date { font-weight: 700 }
         .msg-copy {
           font-weight: 500;
           color: @text-color;
         }
       }
       &.see-all-container {
-        background: #eee url("/img/bg-more-msg.svg") repeat-x top left;
+        background: #f6f6f6 url("../img/bg-more-msg.svg") repeat-x top left;
 
       }
       // Button to show all remaining messages
@@ -353,4 +355,73 @@
       }
     }
   }
+}
+
+
+// Results Circle
+.result-summary-clean
+{
+  @this-width: 30px;
+  // Box
+  display: block;
+  width: @this-width;
+  height: @this-width;
+  margin: 0 5px;
+  // Position
+  position: relative;
+  // Style
+  border: 1px solid @gray-lighter;
+  .border-radius(3px);
+  // Type
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: @this-width;
+
+  &.circ
+  {
+    .border-radius(@this-width);
+  }
+  &.wins
+  {
+    border-color: @brand-success;
+    color: @brand-success;
+  }
+  &.draws
+  {
+    border-color: @gray-light;
+    color: @gray-light;
+  }
+  &.defeats
+  {
+    border-color: @brand-danger;
+    color: @brand-danger;
+  }
+  &.solid
+  {
+    background: @gray-lighter;
+    color: @gray-dark;
+    line-height: @this-width - 2px;
+    &.wins
+    {
+      border-color: @brand-success;
+      background: @brand-success;
+      color: white;
+
+    }
+    &.draws
+    {
+      border-color: @gray-light;
+      background: @gray-light;
+      color: white;
+    }
+    &.defeats
+    {
+      border-color: @brand-danger;
+      background: @brand-danger;
+      color: white;
+    }
+  }
+
+
 }

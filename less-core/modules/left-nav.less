@@ -8,7 +8,7 @@
   top: @header-h; left: 0; bottom: 0;
   z-index: 1;
   // Style
-  background: @gray-darker;
+  background: @gray-ebony;
 
   .nav-options
   {
@@ -24,14 +24,22 @@
       position: relative;
       float: left;
 
-      & > a,
-      & > button
+      .opt-trigger
       {
         overflow: hidden;
         display: block;
         width: 100%; height: 100%;
-        position: relative;
         text-decoration: none;
+        // Box
+        width: 100%;
+        height: 100%;
+        padding: 45px 5px 10px;
+        // Position
+        position: absolute;
+        top: 0; left: 0;
+        // Style
+        border: 0;
+        background: none;
 
         .area-title
         {
@@ -48,15 +56,6 @@
           // Style
           .transition(~"all 200ms ease-in-out");
         }
-        // Box
-        width: 100%;
-        height: 100%;
-        padding: 45px 5px 10px;
-        // Position
-        position: relative;
-        // Style
-        border: 0;
-        background: none;
 
         .this-icon
         {
@@ -84,7 +83,7 @@
       &:hover,
       &.is-active
       {
-        & > a
+        & > .opt-trigger
         {
           text-decoration: none;
           .area-title
@@ -104,20 +103,20 @@
         }
         &.home
         {
-          & > a
+          & > .opt-trigger
           {
             background: @gray;
           }
         }
         &.league
         {
-          & > a
+          & > .opt-trigger
           {
             background: @section-league;
           }
           .this-submenu
           {
-            button
+            .sub-opt
             {
               &:hover
               {
@@ -129,13 +128,13 @@
         }
         &.team
         {
-          & > a
+          & > .opt-trigger
           {
             background: @section-team;
           }
           .this-submenu
           {
-            button
+            .sub-opt
             {
               &:hover
               {
@@ -148,13 +147,13 @@
         }
         &.players
         {
-          & > a
+          & > .opt-trigger
           {
             background: @section-players;
           }
           .this-submenu
           {
-            button
+            .sub-opt
             {
               &:hover
               {
@@ -166,13 +165,13 @@
         }
         &.calendar
         {
-          & > a
+          & > .opt-trigger
           {
             background: @section-calendar;
           }
           .this-submenu
           {
-            button
+            .sub-opt
             {
               &:hover
               {
@@ -192,7 +191,6 @@
     .this-submenu
     {
       padding: 0;
-
       display: block;
       visibility: hidden;
       // Position
@@ -200,34 +198,37 @@
       left: 100%; top: 0;
       .translateY(5px);
       // Style
-      //background: rgba(255,255,255,.25);
-      //.box-shadow(~"0px 1px 1px rgba(0,0,0,.13), 0px 1px 3px rgba(0,0,0,.24)");
+      background: rgba(255,255,255,.75);
+      .box-shadow(~"0px 1px 2px rgba(0,0,0,.12), 0px 1px 3px rgba(0,0,0,.24)");
       .opacity(0);
 
       & > li
       {
-
         // Position
         float: left;
         display: block;
-        & > button
+        & > .sub-opt
         {
           // Box
           min-width: @header-h;
           height: @header-h;
           padding: 0 15px;
+          // Position
+          float: left;
           // Style
           border: 0;
           border-right: 1px solid rgba(0,0,0,.1);
           background: rgba(255,255,255,.9);
           .transition(~"all 200ms ease-in-out");
-
+          cursor: pointer;
           // Type
           font-family: @font-headings;
           text-transform: uppercase;
+          line-height: @header-h;
           font-size: 12px;
           font-weight: 600;
           color: @gray;
+          text-decoration: none;
 
          &:hover
          {
@@ -235,15 +236,15 @@
            .translateX(0);
             .box-shadow(~"inset 0 -5px 0 @{gray-lighter}");
          }
+
         }
-      }
-      &:last-child
-      {
-        & > button
+        &.is-active
         {
-          border-right: 0px;
+          display: none
+          
         }
       }
+
     }
 
     &:hover

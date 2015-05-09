@@ -29,7 +29,9 @@
     <?php include('includes/footer.htm'); ?>
 
     <!-- Side Menu -->
+    <div class="context-side-menu">
 
+    </div>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -26,15 +26,16 @@
     // Position
     position: absolute;
     top: 0; right: 0; left: 0;
+    z-index: 3;
     // Style
-    .opacity(.8);
+
     background: #fff;
     border-bottom: 1px solid @gray-lighter;
     .this-title
     {
       // Box
       padding: 0 15px 0 30px;
-      margin-right: 15px;
+
       width: 250px;
       height: @section-header-h;
       // Position
@@ -66,10 +67,10 @@
     .help-module
     {
       // Box
-      width: 100px;
+      width: 150px;
       height: @section-header-h;
       // Position
-      float: left;
+      float: right;
       position: relative;
     }
     }
@@ -80,10 +81,14 @@
     padding-left: 40px;
     height: @section-header-h;
     // Position
-    float: right;
+    float: left;
     position: relative;
     // Style
-    border-left: 1px solid @gray-lighter;
+    background: transparent;
+    border: 0;
+    border-right: 1px solid @gray-lighter;
+    // Type
+    font-family: @font-headings;
 
     .ico {
       // Box
@@ -109,7 +114,6 @@
       top: 50%;
       .translateY(-50%);
       // Type
-      font-family: @font-family-sans-serif;
       font-size: 18px;
     }
   }
@@ -126,6 +130,48 @@
 
     // Style
 
+  }
+  .inner-header
+  {
+    @this-height: 40px;
+    width: 100%;
+    height: @this-height;
+    margin-bottom: 30px;
+    // Position
+    float: left;
+    position: relative;
+    // Style
+    background: rgba(0, 0, 0, .35);
+
+    .this-title
+    {
+      // Box
+      line-height: @this-height;
+      // Position
+      position: absolute;
+      left: 50%; .translateX(-50%);
+      // Type
+      text-transform: uppercase;
+      font-family: @font-headings ;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .this-secondary-title
+    {
+      // Box
+      line-height: @this-height;
+
+      // Position
+      position: relative;
+      margin-left: 30px;
+
+      // Type
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+    }
   }
 
 }
