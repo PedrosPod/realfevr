@@ -6789,6 +6789,9 @@ button.close {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.padding-all-content {
+  padding: 30px;
+}
 .main-header {
   height: 80px;
   width: 100%;
@@ -7069,8 +7072,12 @@ button.close {
   -webkit-box-shadow: inset 0 -5px 0 #eeeeee;
   box-shadow: inset 0 -5px 0 #eeeeee;
 }
-.main-navigation .has-submenu .this-submenu > li.is-active {
-  display: none;
+.main-navigation .has-submenu .this-submenu > li.is-active a {
+  background: #a6a6a6;
+  color: white;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .main-navigation .has-submenu:hover .this-submenu {
   z-index: 1;
@@ -7120,17 +7127,22 @@ button.close {
   border-right: 1px solid #eeeeee;
 }
 .main-section-wrapper .section-header .this-title h3 {
-  margin-bottom: 0 !important;
+  margin-bottom: 0 ;
+  margin-top: 18px;
   width: 100%;
-  font-size: 24px;
-  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
   color: #ef6c00;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .main-section-wrapper .section-header .this-title h6 {
   margin-top: 5px !important;
+  text-transform: uppercase;
   font-size: 12px;
   color: #333333;
-  font-weight: 300;
+  font-weight: 500;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .main-section-wrapper .section-header .help-module {
   width: 150px;
@@ -7584,12 +7596,14 @@ button.close {
 [data-page="home"] .section-content {
   padding-top: 30px;
 }
-[data-page="league"] {
+[data-page="league"],
+[data-page="team"] {
   background: url("../img/bgs/stadium.jpg") no-repeat;
   background-size: cover;
   background-position: 0 0;
 }
-[data-page="league"] .section-header .this-title h3 {
+[data-page="league"] .section-header .this-title h3,
+[data-page="team"] .section-header .this-title h3 {
   color: #29b6f6 !important;
 }
 [data-page="team"] .section-header .this-title h3 {
@@ -7602,7 +7616,8 @@ button.close {
   color: #db4105;
 }
 .league-card {
-  width: 260px;
+  width: 100%;
+  max-width: 260px;
   height: 400px;
   margin: 0 auto 30px;
   display: block;
@@ -7945,6 +7960,244 @@ button.close {
   -o-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
+}
+.info-card {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto 30px;
+  display: block;
+  -moz-transition: all .25s cubic-bezier(.4,0,.2,1);
+  -webkit-transition: all .25s cubic-bezier(.4,0,.2,1);
+  -o-transition: all .25s cubic-bezier(.4,0,.2,1);
+  transition: all .25s cubic-bezier(.4,0,.2,1);
+  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.12);
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.12);
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.12);
+  background: white;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: auto;
+}
+.info-card .top-area {
+  width: 100%;
+  height: 56.25%;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+.info-card .top-area .team-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.info-card .top-area .team-img img {
+  width: 100%;
+}
+.info-card .bottom-area {
+  width: 100%;
+  height: 30%;
+  position: relative;
+  float: left;
+}
+.info-card.my-team {
+  height: 280px;
+}
+.info-card.my-team .top-area {
+  background: #ef6c00;
+}
+.info-card.my-team .top-area .team-tactics {
+  width: 90px;
+  height: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -30px;
+  z-index: 1;
+  background: #ef6c00;
+  -webkit-border-radius: 30px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 30px;
+  -moz-background-clip: padding;
+  border-radius: 30px;
+  background-clip: padding-box;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.info-card.my-team .bottom-area {
+  height: 43.75%;
+  padding: 15px;
+}
+.info-card.my-team .bottom-area .team-name {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.info-card.my-team .bottom-area .team-owner {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #a6a6a6;
+}
+.info-card.my-team .bottom-area .game-week strong {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 15px;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  background: #29b6f6;
+  color: white;
+  font-weight: 500;
+}
+.info-card.last-substitutions .header-title {
+  width: 100%;
+  height: 45px;
+  float: left;
+  background: #fafafa;
+  -moz-box-shadow: 0px 1px 2px rgba(0,0,0,.12);
+  -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,.12);
+  box-shadow: 0px 1px 2px rgba(0,0,0,.12);
+  color: #a6a6a6;
+  text-align: center;
+  line-height: 45px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.info-card.last-substitutions .list-content {
+  padding: 0 0 0 0;
+  width: 100%;
+  display: block;
+  max-height: 300px;
+  overflow: auto;
+  float: left;
+}
+.info-card.last-substitutions .list-content li {
+  width: 100%;
+  display: block;
+  padding: 15px 15px;
+  float: left;
+  border-bottom: 1px dotted #eeeeee;
+}
+.info-card.last-substitutions .list-content li:last-child {
+  border-bottom: 0;
+}
+.info-card.last-substitutions .list-content .time-stamp {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 11px;
+}
+.info-card.last-substitutions .list-content .time-stamp .game-week {
+  float: left;
+}
+.info-card.last-substitutions .list-content .time-stamp .date {
+  float: right;
+  color: #a6a6a6;
+}
+.info-card.last-substitutions .list-content .player-transfer {
+  padding-left: 40px;
+  margin: 10px 0;
+  position: relative;
+}
+.info-card.last-substitutions .list-content .player-transfer .player-name {
+  width: 100%;
+  display: inline-block;
+}
+.info-card.last-substitutions .list-content .player-transfer .player-position,
+.info-card.last-substitutions .list-content .player-transfer .player-club {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 12px;
+  color: #a6a6a6;
+}
+.info-card.last-substitutions .list-content .player-transfer .this-ico {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0px solid #555555;
+  -webkit-border-radius: 30px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 30px;
+  -moz-background-clip: padding;
+  border-radius: 30px;
+  background-clip: padding-box;
+}
+.info-card.last-substitutions .list-content .player-transfer .this-ico svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -8px 0 0 -8px;
+}
+.info-card.last-substitutions .list-content .player-transfer.in .this-ico {
+  border-color: #5cb85c;
+}
+.info-card.last-substitutions .list-content .player-transfer.in .this-ico svg {
+  fill: #5cb85c;
+}
+.info-card.last-substitutions .list-content .player-transfer.out .this-ico {
+  border-color: #d9534f;
+}
+.info-card.last-substitutions .list-content .player-transfer.out .this-ico svg {
+  fill: #d9534f;
+}
+.info-card.player-card {
+  height: 300px;
+}
+.info-card.player-card .player-summary {
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  float: left;
+  background: #0090e9;
+}
+.info-card.player-card .player-summary .player-name {
+  width: 100%;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+.info-card.player-card .player-summary .player-position {
+  padding: 5px;
+  background: #1da9ff;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  color: white;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.info-card.player-card .player-summary .player-team {
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+  color: #00619d;
 }
 .add-xl {
   width: 260px;

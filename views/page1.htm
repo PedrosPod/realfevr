@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-                    <a class="league-card" href="#page2" data-trigger="ajax-call"]>
+                    <a class="league-card" id="#page2" data-trigger="ajax-call">
                         <div class="league-summary">
                             <div class="league-bg">
                                 <img src="img/soccer-field.png" alt=""/>
@@ -110,3 +110,11 @@
 
     </div>
 </section>
+
+<script>
+    $('[data-trigger="ajax-call"]').on('click', function(thisEv){
+        thisEv.preventDefault();
+        var thisPage = $(this).attr('id');
+        $('#main-content').load('views/' + thisPage + '.htm');
+    });
+</script>

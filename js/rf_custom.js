@@ -67,7 +67,8 @@ function triggerShowWidget() {
 // AJAX CALLS
 function ajaxLeftMenu()
 {
-    
+
+
 
     $('.nav-options li a').click(function() {
         var $linkClicked = $(this).attr('href');
@@ -75,7 +76,7 @@ function ajaxLeftMenu()
         var $pageRoot = $linkClicked.replace('#page', '');
 
         if (!$(this).parent().hasClass("is-active")) {
-            
+
             $(".nav-options li .opt-trigger").parent().removeClass("is-active");
             $(".nav-options li a").parent().removeClass("is-active");
             $(this).parent().addClass("is-active");
@@ -99,6 +100,7 @@ function ajaxLeftMenu()
         else {
             event.preventDefault();
         }
+
 
     });
 
