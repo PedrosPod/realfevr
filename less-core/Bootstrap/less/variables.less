@@ -17,15 +17,17 @@
 @gray-lightest:          lighten(@gray-base, 97.5%);
 
 @brand-primary:         #EF6C00;
-@brand-success:         #5cb85c;
-@brand-info:            #0090E9;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
+@brand-success:         #689F38;
+@brand-info:            #2979FF;
+@brand-warning:         #FFD54F;
+@brand-danger:          #FF1744;
 
 @section-league: #29B6F6;
 @section-team: @brand-primary;
 @section-players: #66BB6A;
 @section-calendar: #DB4105;
+
+@brand-secondary: #263238;
 
 
 
@@ -34,9 +36,9 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #f6f6f6;
+@body-bg:               #f4f5f6;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            @gray;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -112,8 +114,8 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
+@border-radius-base:        2px;
+@border-radius-large:       4px;
 @border-radius-small:       3px;
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -132,21 +134,23 @@
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
-@table-cell-padding:            8px;
+@table-cell-padding:            10px 15px;
 //** Padding for cells in `.table-condensed`.
 @table-condensed-cell-padding:  5px;
 
 //** Default background color used for all tables.
 @table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-@table-bg-accent:               #f9f9f9;
+@table-bg-accent:               #fff;
 //** Background color used for `.table-hover`.
-@table-bg-hover:                #f5f5f5;
+@table-bg-hover:                lighten(@brand-secondary, 78%);
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
-@table-border-color:            #ddd;
+@table-border-color:            #e0e0e0;
 
+@table-text-color: #686868;
+@table-text-accent: @gray-dark;
 
 //== Buttons
 //

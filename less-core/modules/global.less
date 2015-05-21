@@ -1,5 +1,15 @@
 @import "../assembler.less";
 
+*
+{
+  .box-sizing(border-box);
+}
+a, button
+{
+  text-decoration: none;
+  cursor: pointer;
+
+}
 .global-wrapper
 {
   position: absolute;
@@ -89,3 +99,46 @@
 {
   padding: 30px;
 }
+
+// Dividers
+.bench-divider
+{
+  // box
+  margin-top: 60px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+
+  // position
+  // type
+
+  h3
+  {
+    // box
+    width: 100%;
+    padding: 0; margin: 0;
+    // position
+    float: left;
+    position: relative;
+    // Type
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    text-align: left;
+  }
+
+  &:first-of-type
+  {
+    margin-top: 0;
+  }
+}
+
+
+//== Font-sizes
+//
+
+@font-default: 14px;
+@font-sm: 12px;
+@font-xs: 10px;
+@font-lg: 16px;
+@font-xlg: 20px;
+

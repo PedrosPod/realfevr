@@ -11,7 +11,7 @@
 
 .main-section-wrapper
 {
-  @section-header-h: 80px;
+  @section-header-h: 50px;
   // Box
   // Position
   position: absolute;
@@ -30,13 +30,14 @@
     // Style
 
     background: #fff;
-    border-bottom: 1px solid @gray-lighter;
+    //border-bottom: 1px solid @gray-lighter;
+    .box-shadow(~"0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28)");
     .this-title
     {
       // Box
-      padding: 0 15px 0 30px;
+      padding: 0 15px 0 15px;
 
-      width: 250px;
+      //width: 250px;
       height: @section-header-h;
       // Position
       float: left;
@@ -45,10 +46,14 @@
       h3
       {
         // Box
-        margin-bottom: 0 ;
-        margin-top: 18px;
-        width: 100%;
-        //
+        margin: 0;
+
+        display: block;
+        // position
+        position: relative;
+        top: 50%;
+        .translateY(-50%);
+        float: left;
         // Type
         text-transform: uppercase;
         font-size: 20px;
@@ -60,7 +65,14 @@
       h6
       {
         // Box
-        margin-top: 5px !important;
+        margin: 0;
+        margin-left: 15px;
+        display: none;
+        // Position
+        float: left;
+        position: relative;
+        top: 50%;
+        .translateY(-50%);
         // Type
         text-transform: uppercase;
         font-size: 12px;
@@ -74,8 +86,9 @@
       // Box
       width: 150px;
       height: @section-header-h;
+      margin-left: 15px;
       // Position
-      float: right;
+      float: left;
       position: relative;
     }
     }
@@ -86,13 +99,14 @@
     padding-left: 40px;
     height: @section-header-h;
     // Position
-    float: left;
+    float: right;
     position: relative;
     // Style
     background: transparent;
     border: 0;
-    border-right: 1px solid @gray-lighter;
+    border-left: 1px solid @gray-lighter;
     // Type
+    color: @gray;
     font-family: @font-headings;
 
     .ico {
@@ -120,6 +134,24 @@
       .translateY(-50%);
       // Type
       font-size: 18px;
+    }
+    &:hover
+    {
+      color: @gray-darker;
+      background: #fafafa;
+      svg
+      {
+        fill: @brand-primary
+      }
+    }
+    &.is-active
+    {
+      background: @brand-primary;
+      color: white;
+      svg
+      {
+        fill: darken(@brand-primary, 15%);
+      }
     }
   }
 

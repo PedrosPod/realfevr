@@ -2,9 +2,180 @@
 // Tables
 // --------------------------------------------------
 
+// TABLE STUFF
+.cell-summary
+{
+
+  & > span
+  {
+
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    background: @gray-lighter;
+    font-weight: normal;
+    color: @gray;
+    font-size: @font-sm;
+    text-align: center;
+    line-height: 20px;
+
+    &:first-child
+    {
+      .border-radius(2px 0 0 2px);
+    }
+    &:last-child
+    {
+      .border-radius(0 2px 2px 0 );
+    }
+
+    &.total
+    {
+      background: lighten(@brand-success, 20%);
+
+    }
+    &.total-1
+    {
+
+      background: lighten(@brand-success, 30%);
+    }
+    &.total-2
+    {
+      background: lighten(@brand-success, 45%);
+    }
+
+  }
+  &.sec-color
+  {
+    & > span
+    {
+      &.total
+      {
+        background: lighten(@brand-secondary, 50%);
+        color: white;
+      }
+      &.total-1
+      {
+        background: lighten(@brand-secondary, 60%);
+      }
+      &.total-2
+      {
+        background: lighten(@brand-secondary, 70%);
+      }
+    }
+  }
+}
+
+.table-container
+{
+  padding: 30px 15px;
+}
+.table-filters
+{
+  // box
+  padding: 30px 0;
+
+}
+td.actions
+{
+  position: relative;
+}
+.table-actions
+{
+  // box
+  padding: 5px;
+  display: block;
+  width: auto; height: 45px;
+  min-width: 100px;
+  // position
+  position: absolute;
+  top: 100%; right: 15px;
+  margin-top: -15px;
+  z-index: -1;
+  visibility: hidden;
+  // style
+  .transition-normal();
+  .opacity(0);
+  .translateY(15px);
+  background: #f0f0f0;
+  list-style: none;
+  .border-radius(2px);
+  .box-shadow(~"0px 2px 4px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24)");
+
+  &:after {
+    bottom: 100%;
+    left:100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #f0f0f0;
+    border-width: 10px;
+    margin-left: -30px;
+  }
+
+  > li
+  {
+    float: left;
+  }
+
+  .table-action
+  {
+    // box
+    display: block;
+    width: 35px; height: 35px;
+    // position
+    position: relative;
+    float: left;
+    // style
+    border: 0;
+    background: none;
+    .border-radius(0);
+    .background-image(linear-gradient(to bottom, #fff 0%,#eee 100%));
+    svg
+    {
+      // box
+      width: 20px; height: 20px;
+      // position
+      position: absolute;
+      top: 50%; left: 50%;
+      margin: -10px 0 0 -10px;
+      // style
+      fill: @gray-light;
+    }
+    &:hover
+    {
+      svg
+      {
+        fill: @gray;
+      }
+    }
+    &:active
+    {
+      svg
+      {
+        fill: @gray-dark;
+      }
+    }
+
+  }
+
+  &.is-visible
+  {
+    .translateY(0);
+    z-index: 1;
+    visibility: visible;
+    .opacity(1);
+  }
+}
+
 
 table {
   background-color: @table-bg;
+
 }
 caption {
   padding-top: @table-cell-padding;
@@ -22,25 +193,185 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: @line-height-computed;
+  //margin-bottom: @line-height-computed;
+  //margin-top: @line-height-computed;
+  table-layout: fixed;
   // Cells
   > thead,
   > tbody,
   > tfoot {
     > tr {
+      background: #fff;
       > th,
       > td {
+
         padding: @table-cell-padding;
         line-height: @line-height-base;
         vertical-align: top;
         border-top: 1px solid @table-border-color;
+        vertical-align: middle;
+
+        max-width: 100px;
+        font-size: @font-sm;
+
+
+
+      }
+      > td
+      {
+        color: @table-text-color;
+        a
+        {
+          font-weight: 600;
+          color: lighten(@brand-secondary, 15%);
+        }
+
+
+        .player-pos
+        {
+          width: 35px; height: 35px;
+          display: block;
+          margin-right: 10px;
+          margin-left: -5px;
+          // position
+          float: left;
+          // style
+          .border-radius(30px);
+          background: darken(@gray-lighter, 10%);
+          // type
+          text-align: center;
+          line-height: 35px;
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: white;
+          &.df
+          {
+            background: @brand-info;
+          }
+          &.mf
+          {
+            background: @brand-success;
+          }
+          &.at
+          {
+            background: @brand-warning;
+          }
+          &.gk
+          {
+            background: @brand-danger;
+          }
+        }
+
+      }
+      &:first-child
+      {
+        > td
+        {
+          border-top: 0;
+        }
       }
     }
   }
   // Bottom align for column headings
+  > thead > tr
+  {
+    background: lighten(@brand-secondary, 22%);
+  }
   > thead > tr > th {
-    vertical-align: bottom;
-    border-bottom: 2px solid @table-border-color;
+    vertical-align: top;
+    //border-bottom: 2px solid @gray-light;
+
+    font-size: @font-sm;
+    font-family: @font-headings;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: white;
+    padding: 6px 15px;
+    height: 40px;
+    vertical-align: middle;
+    span
+    {
+      display: block;
+
+
+    }
+
+    &.xs
+    {
+      width: 40px;
+
+    }
+    &.sm
+    {
+      width: 120px;
+    }
+    &.md
+    {
+      width: 180px;
+    }
+    &.lg
+    {
+      width: 240px;
+    }
+    &.icon
+    {
+      span
+      {
+        display: block;
+        width: 100%;
+        position: relative;
+        svg
+        {
+          width: 20px; height: 20px;
+          position: absolute;
+          top: 50%; margin-top: -10px;
+          left: 50%; margin-left: -10px;
+
+          // style
+          fill: white;
+        }
+      }
+    }
+
+    .th-second-line
+    {
+      display: none;  
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: rgba(0,0,0,.5);
+    }
+    .table-more-opt
+    {
+      // box
+
+      width: 30px; height: 30px;
+      // position
+      position: relative;
+      float: right;
+      margin-right: -5px;
+      // style
+      border: 0;
+      background: none;
+      .border-radius(30px);
+      svg
+      {
+        width: 18px; height: 18px;
+        position: absolute;
+        top: 50%; left: 50%;
+        margin: -9px 0 0 -9px;
+        fill: rgba(255,255,255,.5);
+      }
+      &:hover
+      {
+        background: rgba(0, 0, 0, .25);
+        svg
+        {
+          fill: white;
+        }
+      }
+    }
   }
   // Remove top border from thead by default
   > caption + thead,
@@ -50,12 +381,14 @@ th {
       > th,
       > td {
         border-top: 0;
+        
       }
     }
   }
   // Account for multiple tbody instances
   > tbody + tbody {
     border-top: 2px solid @table-border-color;
+
   }
 
   // Nesting
