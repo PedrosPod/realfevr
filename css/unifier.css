@@ -2277,116 +2277,105 @@ pre code {
 }
 .table-container {
   padding: 30px 15px;
+  position: relative;
+  padding-right: 280px;
 }
 .table-filters {
-  padding: 30px 0;
+  width: 250px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: white;
 }
-td.actions {
-  position: relative;
-}
-.table-actions {
-  padding: 5px;
-  display: block;
-  width: auto;
+.table-filters .filters-header {
+  width: 100%;
   height: 45px;
-  min-width: 100px;
-  position: absolute;
-  top: 100%;
-  right: 15px;
-  margin-top: -15px;
-  z-index: -1;
-  visibility: hidden;
-  -moz-transition: all .25s cubic-bezier(.4,0,.2,1);
-  -webkit-transition: all .25s cubic-bezier(.4,0,.2,1);
-  -o-transition: all .25s cubic-bezier(.4,0,.2,1);
-  transition: all .25s cubic-bezier(.4,0,.2,1);
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transform: translateY(15px);
-  -moz-transform: translateY(15px);
-  -o-transform: translateY(15px);
-  -ms-transform: translateY(15px);
-  transform: translateY(15px);
-  background: #f0f0f0;
-  list-style: none;
-  -webkit-border-radius: 2px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 2px;
-  -moz-background-clip: padding;
-  border-radius: 2px;
-  background-clip: padding-box;
-  -moz-box-shadow: 0px 2px 4px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
-  -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
-  box-shadow: 0px 2px 4px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24);
-}
-.table-actions:after {
-  bottom: 100%;
-  left: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: #f0f0f0;
-  border-width: 10px;
-  margin-left: -30px;
-}
-.table-actions > li {
   float: left;
+  background: #eeeeee;
+  color: #a6a6a6;
+  text-align: center;
+  line-height: 45px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
-.table-actions .table-action {
+.table-filters .filters-body {
+  width: 100%;
+  float: left;
+  padding: 15px;
+}
+.table-filters .filters-body .divider {
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 100%;
+  margin: 30px 0 15px 0;
   position: relative;
   float: left;
-  border: 0;
-  background: none;
-  -webkit-border-radius: 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0;
-  -moz-background-clip: padding;
-  border-radius: 0;
-  background-clip: padding-box;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
-  background-image: -o-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);
 }
-.table-actions .table-action svg {
-  width: 20px;
-  height: 20px;
+.table-filters .filters-body .divider:before {
+  width: 100%;
+  height: 1px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 0;
+  -moz-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  background: #eeeeee;
+}
+.table-filters .filters-body .divider em {
+  padding: 5px 10px;
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -10px 0 0 -10px;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background: white;
+  color: #a6a6a6;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+td.actions {
+  position: relative;
+  text-align: right;
+}
+td.actions .row-action {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  margin: 0 5px;
+  border: 0;
+  visibility: hidden;
+  background-color: transparent;
+}
+td.actions .row-action svg {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
   fill: #a6a6a6;
 }
-.table-actions .table-action:hover svg {
-  fill: #555555;
-}
-.table-actions .table-action:active svg {
-  fill: #333333;
-}
-.table-actions.is-visible {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -o-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  z-index: 1;
-  visibility: visible;
-  zoom: 1;
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
-  filter: alpha(opacity=100);
+td.actions .row-action:hover svg {
+  fill: #222222;
 }
 table {
   background-color: transparent;
@@ -2494,7 +2483,7 @@ th {
   font-weight: normal;
   color: white;
   padding: 6px 15px;
-  height: 40px;
+  height: 45px;
   vertical-align: middle;
 }
 .table > thead > tr > th span {
@@ -2606,6 +2595,9 @@ th {
 }
 .table-hover > tbody > tr:hover {
   background-color: #f4f6f8;
+}
+.table-hover > tbody > tr:hover .actions .row-action {
+  visibility: visible;
 }
 table col[class*="col-"] {
   position: static;
@@ -8849,4 +8841,16 @@ button {
   -moz-opacity: 0.5;
   opacity: 0.5;
   filter: alpha(opacity=50);
+}
+.floating-info-panel {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(40, 40, 40, 0.9);
+  -moz-box-shadow: 0 0 4px rgba(0,0,0,.24), 0 2px 4px rgba(0,0,0,.12), 0 16px 32px rgba(0,0,0,.4);
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,.24), 0 2px 4px rgba(0,0,0,.12), 0 16px 32px rgba(0,0,0,.4);
+  box-shadow: 0 0 4px rgba(0,0,0,.24), 0 2px 4px rgba(0,0,0,.12), 0 16px 32px rgba(0,0,0,.4);
 }
