@@ -7490,9 +7490,6 @@ button {
   left: 0;
   z-index: 3;
   background: #fff;
-  -moz-box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
-  -webkit-box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
-  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 .main-section-wrapper .section-header .this-title {
   padding: 0 15px 0 15px;
@@ -7586,11 +7583,11 @@ button {
   fill: #ef6c00;
 }
 .main-section-wrapper .context-menu-trigger.is-active {
-  background: #ef6c00;
+  background: #2979ff;
   color: white;
 }
 .main-section-wrapper .context-menu-trigger.is-active svg {
-  fill: #a34900;
+  fill: white;
 }
 .main-section-wrapper .section-content {
   overflow: hidden;
@@ -8653,7 +8650,7 @@ button {
   width: 240px;
   position: fixed;
   z-index: 2;
-  top: 160px;
+  top: 130px;
   right: 0;
   bottom: 0;
   -webkit-transform: translateX(100%);

@@ -31,7 +31,7 @@
 
     background: #fff;
     //border-bottom: 1px solid @gray-lighter;
-    .box-shadow(~"0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28)");
+    //.box-shadow(~"0 1px 2px rgba(0,0,0,.24)");
     .this-title
     {
       // Box
@@ -146,11 +146,12 @@
     }
     &.is-active
     {
-      background: @brand-primary;
+      background: @brand-info;
       color: white;
+
       svg
       {
-        fill: darken(@brand-primary, 15%);
+        fill: white;
       }
     }
   }
