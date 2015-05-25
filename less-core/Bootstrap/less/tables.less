@@ -69,12 +69,83 @@
 .table-container
 {
   padding: 30px 15px;
+  position: relative;
+  &.has-filters
+  {
+    padding-right: 280px;
+  }
 }
-.table-filters
-{
-  // box
-  padding: 30px 0;
-
+.table-filters {
+  width: 250px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: white;
+  font-size: 12px;
+}
+.table-filters .filters-header {
+  width: 100%;
+  height: 45px;
+  float: left;
+  background: #a6a6a6;
+  color: #555555;
+  text-align: center;
+  line-height: 45px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.table-filters .filters-body {
+  width: 100%;
+  float: left;
+}
+.table-filters .filters-body .divider {
+  display: block;
+  width: 100%;
+  margin: 15px 0 5px 0;
+  position: relative;
+  float: left;
+}
+.table-filters .filters-body .divider:before {
+  width: 100%;
+  height: 1px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 0;
+  -moz-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  background: #eeeeee;
+}
+.table-filters .filters-body .divider em {
+  padding: 5px 10px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background: white;
+  color: #a6a6a6;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.table-filters .filters-body .filter-block {
+  width: 100%;
+  padding: 15px 15px;
+  float: left;
 }
 td.actions
 {
