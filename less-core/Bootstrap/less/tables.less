@@ -70,178 +70,139 @@
 {
   padding: 30px 15px;
   position: relative;
-  &.has-filters
-  {
-    padding-right: 280px;
-  }
+  padding-right: 280px;
 }
-.table-filters {
+.table-filters
+{
+  // box
   width: 250px;
   padding: 0;
+
   position: absolute;
-  right: 0;
-  top: 30px;
+  right: 0; top: 30px;
+
   background: white;
+
   font-size: 12px;
-}
-.table-filters .filters-header {
-  width: 100%;
-  height: 45px;
-  float: left;
-  background: #a6a6a6;
-  color: #555555;
-  text-align: center;
-  line-height: 45px;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.table-filters .filters-body {
-  width: 100%;
-  float: left;
-}
-.table-filters .filters-body .divider {
-  display: block;
-  width: 100%;
-  margin: 15px 0 5px 0;
-  position: relative;
-  float: left;
-}
-.table-filters .filters-body .divider:before {
-  width: 100%;
-  height: 1px;
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 0;
-  -moz-transform: translate3d(0, -50%, 0);
-  -o-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  -webkit-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
-  background: #eeeeee;
-}
-.table-filters .filters-body .divider em {
-  padding: 5px 10px;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -moz-transform: translate3d(-50%, -50%, 0);
-  -o-transform: translate3d(-50%, -50%, 0);
-  -ms-transform: translate3d(-50%, -50%, 0);
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-  background: white;
-  color: #a6a6a6;
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-style: normal;
-  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.table-filters .filters-body .filter-block {
-  width: 100%;
-  padding: 15px 15px;
-  float: left;
+
+  .filters-header
+  {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    float: left;
+
+    background: @gray-light;
+    color: @gray;
+    text-align: center;
+    line-height: 45px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .filters-body
+  {
+    width: 100%;
+    float: left;
+
+    
+    .divider
+    {
+      display: block;
+      width: 100%;
+      margin: 15px 0 5px 0;
+      position: relative;
+      float: left;
+      &:before
+      {
+        width: 100%;
+        height: 1px;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%; left: 0;
+        z-index: 0;
+        .translate3d(0,-50%,0);
+        background: @gray-lighter;
+      }
+      em
+      {
+        padding: 5px 10px;
+        display: block;
+        position: absolute;
+        top: 50%; left: 50%;
+        .translate3d(-50%, -50%, 0);
+        background: white;
+        color: @gray-light;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-style: normal;
+        font-family: @font-headings;
+      }
+    }
+
+    .filter-block
+    {
+      width: 100%;
+      padding: 15px 15px;
+      float: left;
+    }
+    .search-by-name
+    {
+
+      > input
+      {
+
+
+      }
+    }
+    .search-by-position
+    {
+
+    }
+    .search-by-team
+    {
+
+    }
+  }
 }
 td.actions
 {
   position: relative;
-}
-.table-actions
-{
-  // box
-  padding: 5px;
-  display: block;
-  width: auto; height: 45px;
-  min-width: 100px;
-  // position
-  position: absolute;
-  top: 100%; right: 15px;
-  margin-top: -15px;
-  z-index: -1;
-  visibility: hidden;
-  // style
-  .transition-normal();
-  .opacity(0);
-  .translateY(15px);
-  background: #f0f0f0;
-  list-style: none;
-  .border-radius(2px);
-  .box-shadow(~"0px 2px 4px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24)");
-
-  &:after {
-    bottom: 100%;
-    left:100%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: #f0f0f0;
-    border-width: 10px;
-    margin-left: -30px;
-  }
-
-  > li
+  text-align: right;
+  .row-action
   {
-    float: left;
-  }
-
-  .table-action
-  {
-    // box
-    display: block;
-    width: 35px; height: 35px;
-    // position
+    width: 30px; height: 30px;
+    display: inline-block;
     position: relative;
-    float: left;
-    // style
+    margin: 0 5px;
     border: 0;
-    background: none;
-    .border-radius(0);
-    .background-image(linear-gradient(to bottom, #fff 0%,#eee 100%));
+    visibility: hidden;
+      //.background-image(linear-gradient(to bottom, #fff 0%,#eee 100%));
+      //.box-shadow(~"inset 0 1px 0 white, 0px 2px 4px rgba(0,0,0,.1)");
+      //border: 1px solid #e0e0e0;
+      //.border-radius(2px);
+    background-color: transparent;
     svg
     {
-      // box
-      width: 20px; height: 20px;
-      // position
+      width: 22px; height: 22px;
       position: absolute;
       top: 50%; left: 50%;
-      margin: -10px 0 0 -10px;
-      // style
+      .translate3d(-50%, -50%, 0);
       fill: @gray-light;
     }
+
     &:hover
     {
       svg
       {
-        fill: @gray;
+        fill: @gray-darker;
       }
     }
-    &:active
-    {
-      svg
-      {
-        fill: @gray-dark;
-      }
-    }
-
-  }
-
-  &.is-visible
-  {
-    .translateY(0);
-    z-index: 1;
-    visibility: visible;
-    .opacity(1);
   }
 }
+
 
 
 table {
@@ -359,7 +320,7 @@ th {
     font-weight: normal;
     color: white;
     padding: 6px 15px;
-    height: 40px;
+    height: 45px;
     vertical-align: middle;
     span
     {
@@ -413,36 +374,7 @@ th {
       font-weight: 400;
       color: rgba(0,0,0,.5);
     }
-    .table-more-opt
-    {
-      // box
 
-      width: 30px; height: 30px;
-      // position
-      position: relative;
-      float: right;
-      margin-right: -5px;
-      // style
-      border: 0;
-      background: none;
-      .border-radius(30px);
-      svg
-      {
-        width: 18px; height: 18px;
-        position: absolute;
-        top: 50%; left: 50%;
-        margin: -9px 0 0 -9px;
-        fill: rgba(255,255,255,.5);
-      }
-      &:hover
-      {
-        background: rgba(0, 0, 0, .25);
-        svg
-        {
-          fill: white;
-        }
-      }
-    }
   }
   // Remove top border from thead by default
   > caption + thead,
@@ -528,6 +460,13 @@ th {
 .table-hover {
   > tbody > tr:hover {
     background-color: @table-bg-hover;
+    .actions
+    {
+      .row-action
+      {
+        visibility: visible;
+      }
+    }
   }
 }
 
