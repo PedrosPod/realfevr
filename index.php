@@ -8,8 +8,6 @@
     <link href="css/unifier.css" rel="stylesheet">
     <link href="css/google-fonts.css" rel="stylesheet">
 
-
-
 </head>
 <body class="museo museo-sans">
 

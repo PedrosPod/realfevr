@@ -1,3 +1,4 @@
+
 <section id="page3" class="main-section-wrapper" data-page="players" data-custom="default-bg">
     <header class="section-header">
         <div class="this-title">
@@ -44,8 +45,14 @@
 
         </ul>
     </aside>
-    <aside class="floating-info-panel large">
+    <aside class="floating-info-panel large" data-widget="player-info-panel">
+        <div class="header">
 
+        </div>
+
+        <div class="body" id="panel-body">
+
+        </div>
     </aside>
     <div class="section-content ">
         <div class="container-fluid">
@@ -185,7 +192,7 @@
         </g>
     </g>
 
-    </svg
+    </svg>
                                     </button>
                                 </th>
                             </tr>
@@ -195,7 +202,7 @@
                             <tr>
                                 <td class="player-cell">
                                     <span class="player-pos mf" title="Médio Direito">MD</span>
-                                    <a href="#">Aaron Appindangoye</a>
+                                    <a href="#" data-event="player-info-pane" data-trigger="player-info-panel" id="player-info">Aaron Appindangoye</a>
                                     <div class="td-second-level">
                                         <span class="label-clear clear">Belenenses</span>
 
@@ -249,63 +256,139 @@
                     </table>
 
                     <div class="table-filters">
-                        <div class="filters-header">Filtrar tabela</div>
+                        <div class="filters-header">
+                            Filtrar tabela
+                            <button class="table-more-opt light fixed right">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="408px" height="408px" viewBox="0 0 408 408" style="enable-background:new 0 0 408 408;" xml:space="preserve">
+    <g>
+        <g id="more-vert">
+            <path d="M204,102c28.05,0,51-22.95,51-51S232.05,0,204,0s-51,22.95-51,51S175.95,102,204,102z M204,153c-28.05,0-51,22.95-51,51
+                s22.95,51,51,51s51-22.95,51-51S232.05,153,204,153z M204,306c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51
+                S232.05,306,204,306z"/>
+        </g>
+    </g>
+
+    </svg>
+                            </button>
+                        </div>
                         <div class="filters-body">
 
-                            <div class="search-by-name">
-                                <input type="text" placeholder="Procurar por nome"/>
+                            <div class="filter-block search-by-name">
+                                <input type="text" class="form-control" placeholder="Procurar por nome"/>
                             </div>
 
                             <span class="divider">
                                 <em>Por posição</em>
                             </span>
 
-                            <div class="search-by-position">
-
+                            <div class="filter-block search-by-position">
+                                <ul class="chkbox-list">
+                                    <li>
+                                        <div class="custom-checkbox">
+                                            <label class="this-label">
+                                                <input type="checkbox" class="this-element" >
+                                                Guarda-redes
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-checkbox">
+                                            <label class="this-label">
+                                                <input type="checkbox" class="this-element" >
+                                                Defesa
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-checkbox">
+                                            <label class="this-label">
+                                                <input type="checkbox" class="this-element" >
+                                                Médio
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-checkbox">
+                                            <label class="this-label">
+                                                <input type="checkbox" class="this-element" >
+                                                Avançado
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
 
                             <span class="divider">
                                 <em>Por Equipa</em>
                             </span>
 
-                            <div class="search-by-team">
+                            <div class="filter-block search-by-team">
 
+                                <select name="" id="" class="form-control">
+                                    <option value="Equipa">Seleccionar equipa</option>
+                                    <option value="Equipa 1">Equipa 1</option>
+                                    <option value="Equipa 2">Equipa 2</option>
+                                    <option value="Equipa 3">Equipa 3</option>
+                                    <option value="Equipa 4">Equipa 4</option>
+                                </select>
                             </div>
 
                             <span class="divider">
                                 <em>Por Adversário</em>
                             </span>
 
-                            <div class="search-by-opponent">
-
+                            <div class="filter-block search-by-opponent">
+                                <select name="" id="" class="form-control">
+                                    <option value="Adversario">Seleccionar Adversario</option>
+                                    <option value="Adversario 1">Adversario 1</option>
+                                    <option value="Adversario 2">Adversario 2</option>
+                                    <option value="Adversario 3">Adversario 3</option>
+                                    <option value="Adversario 4">Adversario 4</option>
+                                </select>
                             </div>
 
                             <span class="divider">
                                 <em>Por Dono</em>
                             </span>
 
-                            <div class="search-by-owner">
-
+                            <div class="filter-block search-by-owner">
+                                <select name="" id="" class="form-control">
+                                    <option value="Dono">Seleccionar Dono</option>
+                                    <option value="Dono 1">Equipa 1</option>
+                                    <option value="Dono 2">Equipa 2</option>
+                                    <option value="Dono 3">Equipa 3</option>
+                                    <option value="Dono 4">Equipa 4</option>
+                                </select>
+                            </div>
+                            <div class="filter-block">
+                                <button class="btn btn-info btn-block">
+                                    Search
+                                </button>
                             </div>
 
                         </div>
                     </div>
                     <nav class="text-center">
-                            <ul class="pagination ">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
+                            <ul class="dotted-pagination">
+                                <li class="nav-control left">
+                                    <button href="#" aria-label="Previous">
+                                        <span aria-hidden="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="pointer-events: none; display: block;"><g id="keyboard-arrow-left"><polygon points="15.4,16.1 10.8,11.5 15.4,6.9 14,5.5 8,11.5 14,17.5 "></polygon></g></svg>
+                                        </span>
+                                    </button>
                                 </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
+                                <li class="active" data-toggle="tooltip" data-placement="bottom" title="Page 1"><a href="#">1</a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Page 2">2</a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Page 3">3</a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Page 4">4</a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Page 5">5</a></li>
+                                <li class="nav-control right">
+                                    <button href="#" aria-label="Next">
+                                        <span aria-hidden="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="pointer-events: none; display: block;"><g id="chevron-right"><polygon points="10,6 8.6,7.4 13.2,12 8.6,16.6 10,18 16,12 "></polygon></g></svg>
+                                        </span>
+                                    </button>
                                 </li>
                             </ul>
                         </nav>
@@ -320,10 +403,12 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="../js/sweetalert.min.js"></script>
 <script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
+
 
 <!-- RealFevr Side Panel -->
 
@@ -336,23 +421,91 @@
        alert('bla');
     });
 
-    $('[data-trigger="ajax-call"]').on('click', function(thisEv){
-        thisEv.preventDefault();
-        var thisPage = $(this).attr('id');
-        $('#main-content').load('views/' + thisPage + '.htm');
-    });
+    !function()
+    {
+        $('[data-trigger="ajax-call"]').on('click', function(thisEv){
+            thisEv.preventDefault();
+            var thisPage = $(this).attr('id');
+            $('#main-content').load('views/' + thisPage + '.htm');
+        });
 
-    $('[data-trigger="flip-card"]').on('click', function(){
-        $('[data-widget="flip-card"]').toggleClass('flipped');
-    });
+    }();
+
 
     // TABLE ACTIONS
-    $('[data-trigger="table-actions"]').each(function(){
-        $(this).on('click', function(){
-            $(this).toggleClass('is-active');
-            $(this).prev().toggleClass('is-visible');
-        }) ;
-    });
+    !function()
+    {
+        $('[data-trigger="table-actions"]').each(function(){
+            $(this).on('click', function(){
+                $(this).toggleClass('is-active');
+                $(this).prev().toggleClass('is-visible');
+            }) ;
+        });
+    }();
+
+    // side Panel Players
+    !function()
+    {
+        var appWidgets = $('[data-widget]');
+        var appTriggers = $('[data-trigger]');
+
+        $('[data-event="player-info-pane"]').each(function(){
+            $(this).on('click',function(ev){
+
+                ev.preventDefault();
+                var thisTrigger = $(this);
+                var thisTriggerName = thisTrigger.attr('data-trigger');
+                var thatWidget = $('[data-widget="' + thisTriggerName + '"]');
+                var ajaxId = $(this).attr('id');
+
+                if(thisTrigger.hasClass('is-active'))
+                {
+                    appWidgets.removeClass('is-visible').removeAttr('data-id');
+                    appTriggers.removeClass('is-active');
+                }
+                else
+                {
+                    appTriggers.removeClass('is-active');
+                    appWidgets.removeClass('is-visible');
+                    thisTrigger.addClass('is-active');
+                    thatWidget.addClass('is-visible');
+                    var thisId = 'bs' + uniqId();
+
+
+                    thatWidget.attr('data-id', thisId);
+                    thatWidget.attr('id', ajaxId)
+                    thisTrigger.attr('data-id', thisId);
+
+                    var thisPage = $(this).attr('id');
+                    $('#panel-body').load('views/' + thisPage + '.htm');
+
+                    // bind clickout function
+                    $(document).mouseup(function (clickOut) {
+                        if (clickOut.target.id !== thatWidget.attr('id') && !thatWidget.has(clickOut.target).length) {
+
+                            thisTrigger.removeClass('is-active');
+                            thatWidget.removeClass('is-visible');
+                            thatWidget.removeAttr('data-id');
+                            thatWidget.find('#panel-body').empty();
+
+                            $(this).unbind(clickOut);
+                        }
+                    });
+                }
+            });
+        });
+        $('[data-trigger="close-panels"]').each(function(){
+            $('[data-trigger="close-panels"]').on('click', function(){
+                appWidgets.removeClass('is-visible').removeAttr('id');
+                appTriggers.removeClass('is-active');
+
+            });
+        })
+    }();
+
+
+
+
 
 
 </script>
