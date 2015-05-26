@@ -73,6 +73,52 @@
     background: rgba(0,0,0,.9) ;
   }
 }
+
+// Table
+// ----------------------------
+
+.table-more-opt
+{
+  // box
+
+  width: 30px; height: 30px;
+  // position
+  position: relative;
+  float: right;
+  margin-right: -5px;
+  // style
+  border: 0;
+  background: none;
+  .border-radius(30px);
+  svg
+  {
+    width: 18px; height: 18px;
+    position: absolute;
+    top: 50%; left: 50%;
+    margin: -9px 0 0 -9px;
+    fill: rgba(255,255,255,.5);
+  }
+  &:hover
+  {
+    background: rgba(0, 0, 0, .25);
+    svg
+    {
+      fill: white;
+    }
+  }
+
+  &.fixed
+  {
+    position: absolute;
+    top: 50%;
+    .translate3d(0,-50%,0);
+    &.right
+    {
+      right: 10px;
+    }
+  }
+}
+
 .table-act-trigger
 {
   display: none;
