@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f78951e0-2c7e-4dc2-8ccc-b1501ddd504c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.codekit" afterPath="$PROJECT_DIR$/config.codekit" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less-core/Bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/less-core/Bootstrap/less/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less-core/Bootstrap/less/tables.less" afterPath="$PROJECT_DIR$/less-core/Bootstrap/less/tables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less-core/modules/buttons.less" afterPath="$PROJECT_DIR$/less-core/modules/buttons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/page4.htm" afterPath="$PROJECT_DIR$/views/page4.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/unifier.css.map" afterPath="$PROJECT_DIR$/css/unifier.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/unifier.css" afterPath="$PROJECT_DIR$/css/unifier.css" />
     </list>
     <ignored path="realfevr.iws" />
@@ -30,17 +30,17 @@
       <file leaf-file-name="page4.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page4.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.82758623">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.5740743">
+              <caret line="260" column="63" selection-start-line="260" selection-start-column="63" selection-end-line="260" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forms.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less-core/Bootstrap/less/forms.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5950156">
+            <state vertical-scroll-proportion="-9.019608">
               <caret line="712" column="4" selection-start-line="712" selection-start-column="4" selection-end-line="712" selection-end-column="4" />
               <folding>
                 <element signature="e#17456#17779#0" expanded="false" />
@@ -50,14 +50,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buttons.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="buttons.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/less-core/modules/buttons.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="158" column="13" selection-start-line="158" selection-start-column="13" selection-end-line="158" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.9466976">
+              <caret line="119" column="19" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="19" />
               <folding>
                 <element signature="e#8#698#0" expanded="false" />
                 <element signature="e#709#1033#0" expanded="false" />
+                <element signature="e#1441#1521#0" expanded="false" />
+                <element signature="e#1710#1824#0" expanded="false" />
+                <element signature="e#2272#2805#0" expanded="false" />
+                <element signature="e#2821#3720#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -66,7 +70,7 @@
       <file leaf-file-name="cards.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less-core/modules/cards.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
               <folding />
             </state>
@@ -78,16 +82,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sweet-alert.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/sweet-alert.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -139,12 +133,12 @@
         <option value="$PROJECT_DIR$/views/player-info.html" />
         <option value="$PROJECT_DIR$/less-core/modules/sweetAlert.less" />
         <option value="$PROJECT_DIR$/views/player-info.htm" />
-        <option value="$PROJECT_DIR$/less-core/modules/buttons.less" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/views/page4.htm" />
         <option value="$PROJECT_DIR$/less-core/base.less" />
         <option value="$PROJECT_DIR$/less-core/Bootstrap/less/tables.less" />
         <option value="$PROJECT_DIR$/less-core/Bootstrap/less/forms.less" />
+        <option value="$PROJECT_DIR$/views/page4.htm" />
+        <option value="$PROJECT_DIR$/less-core/modules/buttons.less" />
       </list>
     </option>
   </component>
@@ -160,8 +154,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="6144" />
+    <option name="y" value="181" />
+    <option name="width" value="4096" />
+    <option name="height" value="2304" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -451,14 +447,15 @@
       <workItem from="1432588494311" duration="933000" />
       <workItem from="1432589643281" duration="7044000" />
       <workItem from="1432601701372" duration="240000" />
+      <workItem from="1432598556109" duration="158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10850000" />
+    <option name="totallyTimeSpent" value="11008000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="6144" y="181" width="4096" height="2304" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -467,7 +464,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15985577" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15966775" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1881259" sideWeight="0.48498693" order="0" side_tool="false" content_ui="combo" />
@@ -813,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less-core/modules/cards.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less-core/Bootstrap/less/pagination.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -836,17 +825,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less-core/modules/buttons.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="158" column="13" selection-start-line="158" selection-start-column="13" selection-end-line="158" selection-end-column="13" />
-          <folding>
-            <element signature="e#8#698#0" expanded="false" />
-            <element signature="e#709#1033#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,21 +860,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/less-core/modules/cards.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/page4.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.82758623">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.5740743">
+          <caret line="260" column="63" selection-start-line="260" selection-start-column="63" selection-end-line="260" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/less-core/Bootstrap/less/forms.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5950156">
+        <state vertical-scroll-proportion="-9.019608">
           <caret line="712" column="4" selection-start-line="712" selection-start-column="4" selection-end-line="712" selection-end-column="4" />
           <folding>
             <element signature="e#17456#17779#0" expanded="false" />
             <element signature="e#17801#18134#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less-core/modules/buttons.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9466976">
+          <caret line="119" column="19" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="19" />
+          <folding>
+            <element signature="e#8#698#0" expanded="false" />
+            <element signature="e#709#1033#0" expanded="false" />
+            <element signature="e#1441#1521#0" expanded="false" />
+            <element signature="e#1710#1824#0" expanded="false" />
+            <element signature="e#2272#2805#0" expanded="false" />
+            <element signature="e#2821#3720#0" expanded="false" />
           </folding>
         </state>
       </provider>
