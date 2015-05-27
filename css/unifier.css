@@ -2357,6 +2357,7 @@ pre code {
 }
 .table-filters .filters-body .player-position-list {
   padding: 0;
+  margin: 0;
   list-style: none;
   display: inline-block;
   width: 100%;

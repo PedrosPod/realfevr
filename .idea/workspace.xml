@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f78951e0-2c7e-4dc2-8ccc-b1501ddd504c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less-core/Bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/less-core/Bootstrap/less/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/page4.htm" afterPath="$PROJECT_DIR$/views/page4.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less-core/Bootstrap/less/tables.less" afterPath="$PROJECT_DIR$/less-core/Bootstrap/less/tables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/unifier.css" afterPath="$PROJECT_DIR$/css/unifier.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="realfevr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forms.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less-core/Bootstrap/less/forms.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.50940555">
+            <state vertical-scroll-proportion="19.342857">
               <caret line="159" column="61" selection-start-line="159" selection-start-column="58" selection-end-line="159" selection-end-column="61" />
               <folding>
                 <marker date="1432688857000" expanded="true" signature="18506:18513" placeholder="{...}" />
@@ -70,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tables.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tables.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/less-core/Bootstrap/less/tables.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="238" column="39" selection-start-line="238" selection-start-column="39" selection-end-line="238" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.096313015">
+              <caret line="170" column="16" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -163,8 +159,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/less-core/Bootstrap/less/variables.less" />
         <option value="$PROJECT_DIR$/views/page4.htm" />
-        <option value="$PROJECT_DIR$/less-core/Bootstrap/less/tables.less" />
         <option value="$PROJECT_DIR$/less-core/Bootstrap/less/forms.less" />
+        <option value="$PROJECT_DIR$/less-core/Bootstrap/less/tables.less" />
       </list>
     </option>
   </component>
@@ -355,12 +351,12 @@
       <workItem from="1432675925361" duration="2612000" />
       <workItem from="1432688399159" duration="101000" />
       <workItem from="1432688511336" duration="419000" />
-      <workItem from="1432688988786" duration="128000" />
+      <workItem from="1432688988786" duration="247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14249000" />
+    <option name="totallyTimeSpent" value="14368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -667,6 +663,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.135725">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -702,6 +699,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.2156863">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -770,21 +768,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less-core/Bootstrap/less/tables.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="238" column="39" selection-start-line="238" selection-start-column="39" selection-end-line="238" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less-core/Bootstrap/less/forms.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.50940555">
+        <state vertical-scroll-proportion="19.342857">
           <caret line="159" column="61" selection-start-line="159" selection-start-column="58" selection-end-line="159" selection-end-column="61" />
           <folding>
             <marker date="1432688857000" expanded="true" signature="18506:18513" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less-core/Bootstrap/less/tables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.096313015">
+          <caret line="170" column="16" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
