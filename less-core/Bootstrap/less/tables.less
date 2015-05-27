@@ -91,13 +91,13 @@
     height: 45px;
     position: relative;
     float: left;
-
+    font-family: @font-headings;
     background: white;
     color: @gray;
     text-align: center;
     line-height: 45px;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: normal;
     text-transform: uppercase;
   }
   .filters-body
@@ -164,6 +164,135 @@
     .search-by-team
     {
 
+    }
+    .player-position-list
+    {
+      padding: 0;
+
+      list-style: none;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+
+      > li
+      {
+        display: inline-block;
+        margin: 0 5px 5px;
+      }
+    }
+    
+    .player-pos-chk
+    {
+      > label
+      {
+        width: 30px; height: 30px;
+        display: block;
+
+        position: relative;
+
+        span
+        {
+          display: block; 
+          position: absolute;
+          top: 50%; left: 50%;
+          .translate3d(-50%, -50%,0);
+          z-index: 1;
+          color: white;
+        }
+        input
+        {
+          visibility: hidden;
+          &:before
+          {
+            display: block;
+            position: absolute;
+            top: 0; left:0;
+            width: 30px; height: 30px;
+            visibility: visible;
+            content: '';
+            .transition-normal();
+            .border-radius(30px);
+            background: @gray;
+          }
+          
+          &:checked
+          {
+            &:before
+            {
+              background: @brand-info;
+              .box-shadow(~"none");
+            }
+          }
+        }
+      }
+      
+      &.gk
+      {
+        > label
+        {
+          input
+          {
+            &:checked
+            {
+              &:before
+              {
+                background: @brand-success;
+              }
+            }
+          }
+        }
+      }
+
+      &.df
+      {
+        > label
+        {
+          input
+          {
+            &:checked
+            {
+              &:before
+              {
+                background: @brand-warning;
+              }
+            }
+          }
+        }
+      }
+
+      &.md
+      {
+        > label
+        {
+          input
+          {
+            &:checked
+            {
+              &:before
+              {
+                background: @brand-info;
+              }
+            }
+          }
+        }
+      }
+
+      &.st
+      {
+        > label
+        {
+          input
+          {
+            &:checked
+            {
+              &:before
+              {
+                background: @brand-danger;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

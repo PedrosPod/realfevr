@@ -6,7 +6,8 @@
 
     <!-- RealFevr Base CSS -->
     <link href="css/unifier.css" rel="stylesheet">
-    <link href="css/google-fonts.css" rel="stylesheet">
+    <!--<link href="css/google-fonts.css" rel="stylesheet">-->
+    <link href="fonts/san-fran/san-fran.css" rel="stylesheet">
 
 </head>
 <body class="museo museo-sans">
