@@ -69,11 +69,11 @@
 
 .table-container
 {
-  padding: 30px 0px;
+  padding: 15px 0px;
   position: relative;
   &.has-filters
   {
-    padding-right: 280px;
+    padding-right: 265px;
   }
 
 }
@@ -81,7 +81,7 @@
 {
   width: 250px;
   position: absolute;
-  right: 0px; top: 30px;
+  right: 0px; top: 15px;
 }
 .table-filters
 {
@@ -345,9 +345,6 @@ td.actions
     }
   }
 }
-
-
-
 table {
   background-color: @table-bg;
 }
@@ -436,7 +433,20 @@ th {
             background: #348AA7;
           }
         }
+        &.player-cell
+        {
+          > a
+          {
+            display: inline-block;
+            max-width: 100%;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
 
+            text-decoration: none;
+          }
+        }
       }
       &:first-child
       {
@@ -483,6 +493,7 @@ th {
     span
     {
       display: block;
+      position: relative;
 
     }
 
@@ -497,11 +508,11 @@ th {
     }
     &.md
     {
-      width: 200px;
+      width: 160px;
     }
     &.lg
     {
-      width: 240px;
+      width: 200px;
     }
     &.icon
     {
@@ -531,6 +542,7 @@ th {
       font-weight: 400;
       color: rgba(0,0,0,.5);
     }
+
 
   }
   // Remove top border from thead by default

@@ -2276,17 +2276,17 @@ pre code {
   background: #dce3e7;
 }
 .table-container {
-  padding: 30px 0px;
+  padding: 15px 0px;
   position: relative;
 }
 .table-container.has-filters {
-  padding-right: 280px;
+  padding-right: 265px;
 }
 .table-features {
   width: 250px;
   position: absolute;
   right: 0px;
-  top: 30px;
+  top: 15px;
 }
 .table-filters {
   width: 100%;
@@ -2573,6 +2573,17 @@ th {
 .table > tfoot > tr > td .player-pos.gk {
   background: #348AA7;
 }
+.table > thead > tr > td.player-cell > a,
+.table > tbody > tr > td.player-cell > a,
+.table > tfoot > tr > td.player-cell > a {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
 .table > thead > tr:first-child > td,
 .table > tbody > tr:first-child > td,
 .table > tfoot > tr:first-child > td {
@@ -2605,6 +2616,7 @@ th {
 }
 .table > thead > tr > th span {
   display: block;
+  position: relative;
 }
 .table > thead > tr > th.xs {
   width: 40px;
@@ -2613,10 +2625,10 @@ th {
   width: 140px;
 }
 .table > thead > tr > th.md {
-  width: 200px;
+  width: 160px;
 }
 .table > thead > tr > th.lg {
-  width: 240px;
+  width: 200px;
 }
 .table > thead > tr > th.icon span {
   display: block;
@@ -7750,7 +7762,10 @@ button {
   right: 0;
   left: 0;
   z-index: 3;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.24);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.24);
+  box-shadow: 0 1px 2px rgba(0,0,0,.24);
 }
 .main-section-wrapper .section-header > .this-title {
   padding: 0 15px 0 15px;
@@ -7870,8 +7885,9 @@ button {
 .main-section-wrapper .section-content {
   overflow: hidden;
   overflow-y: auto;
+  padding-top: 50px;
   position: absolute;
-  top: 80px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -8439,6 +8455,11 @@ button {
 [data-page="players"] table > thead > tr {
   background: rgba(102, 187, 106, 0.9);
 }
+[data-page="calendar"] .section-content > .container,
+[data-page="calendar"] .section-content > .container-fluid {
+  padding-top: 15px;
+  padding-bottom: 12px;
+}
 [data-page="calendar"] .section-header .this-title h3 {
   color: #db4105 !important;
 }
@@ -8810,6 +8831,7 @@ button {
   margin: 0 auto;
   display: block;
   min-height: 50px;
+  overflow: auto;
   position: relative;
   -webkit-border-radius: 2px;
   -webkit-background-clip: padding-box;
@@ -8835,10 +8857,10 @@ button {
   border-radius: 2px 2px 0 0;
   background-clip: padding-box;
   font-family: "San Francisco Display", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
   text-align: center;
+  position: relative;
 }
 .info-card .header.small {
   height: 40px;
@@ -8851,6 +8873,11 @@ button {
 .info-card .header.flat--blue {
   background: #03a9f4;
   color: white;
+}
+.info-card .body {
+  width: 100%;
+  float: left;
+  padding: 30px;
 }
 .card-container {
   background: rgba(0, 0, 0, 0.4);
@@ -8899,26 +8926,31 @@ button {
   cursor: pointer;
 }
 .see-more {
-  width: 200px;
+  width: 100%;
   height: 45px;
-  margin: 0 auto;
+  margin: 15px auto;
+  float: left;
   border: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.25);
   -webkit-border-radius: 3px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 3px;
   -moz-background-clip: padding;
   border-radius: 3px;
   background-clip: padding-box;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
   color: white;
   font-size: 16px;
 }
 .see-more.full-line {
   width: 50%;
-  margin: 0 25%;
+  margin: 30px 25%;
 }
 .see-more:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: #4caf50;
+  color: white;
 }
 .table-more-opt {
   width: 30px;
@@ -9336,14 +9368,23 @@ button {
   -webkit-box-shadow: 0 0 4px rgba(0,0,0,.24), 0 2px 4px rgba(0,0,0,.12), 0 16px 32px rgba(0,0,0,.4);
   box-shadow: 0 0 4px rgba(0,0,0,.24), 0 2px 4px rgba(0,0,0,.12), 0 16px 32px rgba(0,0,0,.4);
 }
-.ads-side {
+.ads-block {
   width: 100%;
   height: 200px;
-  margin: 30px 0;
+  margin: 15px 0;
   float: left;
   background: yellow;
 }
-.ads-top {
+.ads-side-fh {
+  min-height: 500px;
+  height: 100%;
+  width: 100%;
+  min-width: 90px;
+  margin: 0 auto;
+  float: left;
+  background: #03a9f4;
+}
+.ads-horizontal {
   width: 100%;
   height: 90px;
   background: yellow;
@@ -9351,4 +9392,208 @@ button {
 .ads-white-space {
   padding: 0 30px;
   margin-bottom: 0px;
+}
+.player-id {
+  width: 200px;
+  height: 40px;
+  padding: 0px 15px 0px 45px;
+  position: relative;
+  float: left;
+}
+.player-id .position {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-right: 10px;
+  margin-left: -5px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  -moz-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  -webkit-border-radius: 30px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 30px;
+  -moz-background-clip: padding;
+  border-radius: 30px;
+  background-clip: padding-box;
+  background: #d5d5d5;
+  text-align: center;
+  line-height: 40px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+.player-id .position.df {
+  background: #ffc107;
+}
+.player-id .position.mf {
+  background: #4caf50;
+}
+.player-id .position.st {
+  background: #f44336;
+}
+.player-id .position.gk {
+  background: #348AA7;
+}
+.player-id .name,
+.player-id .team {
+  width: 100%;
+  height: 20px;
+  float: left;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.player-id .name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+}
+.player-id .team {
+  font-size: 12px;
+  font-weight: normal;
+  color: #a6a6a6;
+}
+.last-game-summary {
+  margin: 0 auto 0;
+  min-width: 360px;
+}
+.last-game-summary .header {
+  width: 100%;
+  height: 110px;
+  padding: 15px 15px 15px 115px;
+  margin-bottom: 15px;
+  background: #db4105;
+}
+.last-game-summary .header img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+.last-game-summary .header .text {
+  width: 100%;
+  float: left;
+  position: relative;
+  top: 50%;
+  -moz-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  text-align: left;
+  font-size: 20px;
+  font-family: "San Francisco Display", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: white;
+}
+.last-game-summary .header .floating-element {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 15px;
+  bottom: -35px;
+  -webkit-border-radius: 70px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 70px;
+  -moz-background-clip: padding;
+  border-radius: 70px;
+  background-clip: padding-box;
+  background: #ef6c00;
+  -moz-box-shadow: 0 0 4px rgba(0,0,0,.24), 0px 4px 8px rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,.24), 0px 4px 8px rgba(0,0,0,.12);
+  box-shadow: 0 0 4px rgba(0,0,0,.24), 0px 4px 8px rgba(0,0,0,.12);
+}
+.last-game-summary .header .floating-element .game-score {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  margin-top: 5px;
+}
+.last-game-summary .header .floating-element .game-score span {
+  display: block;
+  color: white;
+  font-size: 10px;
+  font-weight: 300;
+  width: 100%;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+.last-game-summary .header .floating-element .game-score span.score {
+  font-size: 26px;
+  font-weight: 600;
+}
+.my-game-player-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+.my-game-player-list > li {
+  width: 100%;
+  float: left;
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: 1px dotted #eeeeee;
+  position: relative;
+}
+.my-game-player-list > li:last-child {
+  border: 0;
+}
+.my-game-player-list > li .player-score {
+  float: right;
+  width: 40px;
+  position: relative;
+  height: 26px;
+  padding: 0px 10px;
+  background: #eeeeee;
+  -webkit-border-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 20px;
+  -moz-background-clip: padding;
+  border-radius: 20px;
+  background-clip: padding-box;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 26px;
+}
+.vs-sign {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background: #ef6c00;
+  color: white;
+  -webkit-border-radius: 100px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 100px;
+  -moz-background-clip: padding;
+  border-radius: 100px;
+  background-clip: padding-box;
+  line-height: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
 }

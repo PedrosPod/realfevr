@@ -1,0 +1,135 @@
+
+
+
+// LAST GAME SUMMARY
+.last-game-summary
+{
+  margin: 0 auto 0;
+  min-width: 360px;
+  .header
+  {
+    width: 100%;
+    height: 110px;
+    padding: 15px 15px 15px 115px;
+    margin-bottom: 15px;
+    background: @section-calendar;
+    img
+    {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+    
+    .text
+    {
+      width: 100%;
+      float: left;
+      position: relative;
+      top: 50%;
+      .translate3d(0,-50%,0);
+
+      text-align: left;
+      font-size: 20px;
+      font-family: @font-headings;
+      font-weight: 300;
+      color: white;
+    }
+    
+    .floating-element
+    {
+      width: 70px;
+      height: 70px;
+
+      position: absolute;
+      right: 15px;
+      bottom: -35px;
+     .border-radius(70px);
+      background: @brand-primary;
+      .box-shadow(~"0 0 4px rgba(0,0,0,.24), 0px 4px 8px rgba(0,0,0,.12)");
+
+      .game-score {
+        position: absolute;
+        top: 50%;
+        .translate3d(0,-50%,0);
+        margin-top: 5px;
+        span
+        {
+          display: block;
+          color: white;
+          font-size: 10px;
+          font-weight: 300;
+          width:100%;
+          float: left;
+          text-align: center;
+          text-transform: uppercase;
+          line-height: 20px;
+          &.score
+          {
+            font-size: 26px;
+            font-weight: 600;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.my-game-player-list
+{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  float: left;
+  > li {
+    width: 100%;
+    float: left;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: 1px dotted @gray-lighter;
+    position: relative;
+    &:last-child
+    {
+      border: 0;
+    }
+
+    .player-score
+    {
+      float: right;
+      width: 40px;
+      position: relative;
+      height: 26px;
+      padding: 0px 10px;
+      background: @gray-lighter;
+      .border-radius(20px);
+
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 26px;
+    }
+  }
+}
+.vs-sign
+{
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top: 50%; left: 50%;
+  .translate3d(-50%, -50%,0);
+
+  background: @brand-primary;
+  color: white;
+  .border-radius(100px);
+  line-height: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+
+
+}
