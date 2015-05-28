@@ -357,6 +357,75 @@
   }
 }
 
+// Select Box
+.elem-opt-menu
+{
+  height: 0px;
+  width: 200px;
+  padding: 0; margin: 0;
+  display: block;
+  position: absolute;
+  top: -10px; right: -10px;
+  z-index: 1;
+  list-style: none;
+  background: #fff;
+  .opacity(0);
+
+  .transition-normal();
+  overflow: hidden;
+  .header
+  {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 0px;
+    color: @gray-light;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 45px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    > li {
+      width: 100%;
+      height: 45px;
+      float: left;
+      margin: 0 0 15px;
+      padding: 0 15px;
+      .transition-long();
+
+
+    }
+    .label
+    {
+      color: @gray;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 300;
+    }
+    .control
+    {
+      position: relative;
+      width: 100%;
+      height: 45px;
+    }
+
+  }
+
+  &.is-visible
+  {
+    .opacity(1);
+    height: 350px;
+    .box-shadow(~"0 0 1px rgba(76,86,103,.25),0 2px 18px rgba(31,37,50,.32)");
+    > li
+    {
+      height: 45px;
+    }
+  }
+}
+
 
 // Results Circle
 .result-summary-clean
@@ -446,4 +515,66 @@
   {
     height: 60px;
   }
+}
+
+
+
+// Switch
+.input-switch {
+  position: relative;
+  display: inline-block;
+  height: 35px;
+  width: 65px;
+  overflow: hidden;
+
+}
+
+.input-switch .input-switch-btn {
+  position: absolute;
+  left: -60px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+}
+
+.input-switch .input-switch-btn:before,
+.input-switch .input-switch-btn:after {
+  content: " ";
+  display: table;
+  position: absolute;
+}
+
+.input-switch .input-switch-btn:before {
+  width: 40px;
+  height: 20px;
+  background: #f1f1f1;
+  border-radius: 30px;
+
+  left: 62px;
+  top: 0;
+  transition: all .2s ease-in;
+}
+
+.input-switch .input-switch-btn:after {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  left: 62px;
+  top: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: left .2s ease-in;
+}
+
+.input-switch .input-switch-btn:checked:before {
+  background: #8CE196;
+}
+
+.input-switch .input-switch-btn:checked:after {
+  left: 82px;
 }

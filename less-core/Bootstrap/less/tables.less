@@ -9,8 +9,9 @@
   & > span
   {
 
-    width: 30px;
+    min-width: 40px;
     height: 20px;
+    padding: 0 5px;
     display: inline-block;
     float: left;
     background: @gray-lighter;
@@ -52,7 +53,7 @@
       &.total
       {
         background: lighten(@brand-secondary, 50%);
-        color: white;
+
       }
       &.total-1
       {
@@ -68,21 +69,31 @@
 
 .table-container
 {
-  padding: 30px 15px;
+  padding: 30px 0px;
   position: relative;
-  padding-right: 280px;
+  &.has-filters
+  {
+    padding-right: 280px;
+  }
+
+}
+.table-features
+{
+  width: 250px;
+  position: absolute;
+  right: 0px; top: 30px;
 }
 .table-filters
 {
   // box
-  width: 250px;
+  width: 100%;
   padding: 0;
 
-  position: absolute;
-  right: 0; top: 30px;
 
-  background: white;
-
+  .border-radius(2px);
+  overflow: hidden;
+  .box-shadow(~"0 0 4px rgba(0,0,0,.24)");
+  background: #fafafa;
   font-size: 12px;
 
   .filters-header
@@ -99,6 +110,7 @@
     font-size: 14px;
     font-weight: normal;
     text-transform: uppercase;
+    border-bottom: 1px solid @gray-lighter;
   }
   .filters-body
   {
@@ -116,7 +128,7 @@
       &:before
       {
         width: 100%;
-        height: 1px;
+        height: 2px;
         content: '';
         display: block;
         position: absolute;
@@ -132,7 +144,7 @@
         position: absolute;
         top: 50%; left: 50%;
         .translate3d(-50%, -50%, 0);
-        background: white;
+        background: #fafafa;
         color: @gray-light;
         font-size: 10px;
         font-weight: 500;
@@ -212,7 +224,7 @@
             content: '';
             .transition-normal();
             .border-radius(30px);
-            background: @gray;
+            background: @gray-light;
           }
           
           &:checked
@@ -236,7 +248,7 @@
             {
               &:before
               {
-                background: @brand-info;
+                background: #348AA7;
               }
             }
           }
@@ -260,7 +272,7 @@
         }
       }
 
-      &.md
+      &.mf
       {
         > label
         {
@@ -300,6 +312,7 @@ td.actions
 {
   position: relative;
   text-align: right;
+  
   .row-action
   {
     width: 30px; height: 30px;
@@ -307,15 +320,15 @@ td.actions
     position: relative;
     margin: 0 5px;
     border: 0;
-    visibility: hidden;
+    visibility: visible;
       //.background-image(linear-gradient(to bottom, #fff 0%,#eee 100%));
       //.box-shadow(~"inset 0 1px 0 white, 0px 2px 4px rgba(0,0,0,.1)");
       //border: 1px solid #e0e0e0;
-      //.border-radius(2px);
-    background-color: transparent;
+      .border-radius(2px);
+    background-color: @gray-lighter;
     svg
     {
-      width: 22px; height: 22px;
+      width: 20px; height: 20px;
       position: absolute;
       top: 50%; left: 50%;
       .translate3d(-50%, -50%, 0);
@@ -324,9 +337,10 @@ td.actions
 
     &:hover
     {
+      background: @brand-info;
       svg
       {
-        fill: @gray-darker;
+        fill: white;
       }
     }
   }
@@ -336,7 +350,6 @@ td.actions
 
 table {
   background-color: @table-bg;
-
 }
 caption {
   padding-top: @table-cell-padding;
@@ -408,19 +421,19 @@ th {
           color: white;
           &.df
           {
-            background: @brand-info;
+            background: @brand-warning;
           }
           &.mf
           {
             background: @brand-success;
           }
-          &.at
+          &.st
           {
-            background: @brand-warning;
+            background: @brand-danger;
           }
           &.gk
           {
-            background: @brand-danger;
+            background: #348AA7;
           }
         }
 
@@ -451,10 +464,25 @@ th {
     padding: 6px 15px;
     height: 45px;
     vertical-align: middle;
+    
+    &:hover
+    {
+      cursor: pointer;
+      background: darken(@section-players, 10%);
+    }
+    &.actions
+    {
+      position: relative;
+      &:hover
+      {
+        cursor: auto;
+        background: none;
+      }
+    }
+    
     span
     {
       display: block;
-
 
     }
 
@@ -465,11 +493,11 @@ th {
     }
     &.sm
     {
-      width: 120px;
+      width: 140px;
     }
     &.md
     {
-      width: 180px;
+      width: 200px;
     }
     &.lg
     {
