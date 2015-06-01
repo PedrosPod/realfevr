@@ -2450,27 +2450,27 @@ pre code {
   color: white;
 }
 .table-filters .filters-body .player-pos-chk.gk > label input:before {
-  border-color: #3d315b;
+  border-color: #3f51b5;
 }
 .table-filters .filters-body .player-pos-chk.gk > label input:after {
   content: 'GR';
-  color: #3d315b;
+  color: #3f51b5;
 }
 .table-filters .filters-body .player-pos-chk.gk > label input:checked:before {
-  background: #3d315b;
+  background: #3f51b5;
 }
 .table-filters .filters-body .player-pos-chk.gk > label input:checked:after {
   color: white;
 }
 .table-filters .filters-body .player-pos-chk.df > label input:before {
-  border-color: #32936f;
+  border-color: #00bcd4;
 }
 .table-filters .filters-body .player-pos-chk.df > label input:after {
-  color: #32936f;
+  color: #00bcd4;
   content: 'DF';
 }
 .table-filters .filters-body .player-pos-chk.df > label input:checked:before {
-  background: #32936f;
+  background: #00bcd4;
 }
 .table-filters .filters-body .player-pos-chk.df > label input:checked:after {
   color: white;
@@ -2578,7 +2578,7 @@ th {
 .table > thead > tr > td .player-pos.df,
 .table > tbody > tr > td .player-pos.df,
 .table > tfoot > tr > td .player-pos.df {
-  background: #32936f;
+  background: #00bcd4;
 }
 .table > thead > tr > td .player-pos.mf,
 .table > tbody > tr > td .player-pos.mf,
@@ -2593,7 +2593,7 @@ th {
 .table > thead > tr > td .player-pos.gk,
 .table > tbody > tr > td .player-pos.gk,
 .table > tfoot > tr > td .player-pos.gk {
-  background: #3d315b;
+  background: #3f51b5;
 }
 .table > thead > tr > td.player-cell > a,
 .table > tbody > tr > td.player-cell > a,
@@ -9474,6 +9474,9 @@ button {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+.ads.home {
+  margin-bottom: 40px;
+}
 .ads-block {
   width: 100%;
   height: 200px;
@@ -9554,7 +9557,7 @@ button {
   color: white;
 }
 .player-id .position.df {
-  background: #32936f;
+  background: #00bcd4;
 }
 .player-id .position.mf {
   background: #f9c22e;
@@ -9563,7 +9566,7 @@ button {
   background: #f15946;
 }
 .player-id .position.gk {
-  background: #3d315b;
+  background: #3f51b5;
 }
 .player-id .name,
 .player-id .team {
