@@ -1,10 +1,58 @@
+  @ads-bg: #FBCE20;
+
+.ads
+{
+  position: relative;
+  .logo
+  {
+    width: 150px;
+    height: 60px;
+    position: absolute;
+    top: 50%; margin-top: -30px;
+    left: 50%; margin-left: -75px;
+    background: url("../img/sptv-logo.svg") no-repeat center center;
+    .background-size(contain);
+  }
+  &.logo-cl
+  {
+    .logo
+    {
+      background: url("../img/sptv-logo-color.svg") no-repeat center center;
+    }
+  }
+  &.floater
+  {
+    position: absolute;
+    width: 300px;
+    height: 169px;
+    .logo
+    {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      top: auto; left: auto;
+      .translate3d(0,0,0);
+    }
+    &.bottom
+    {
+      bottom: 30px;
+     &.center
+     {
+       left: 50%;
+       .translateX(-50%);
+     }
+    }
+
+  }
+}
 .ads-block
 {
   width: 100%;
   height: 200px;
   margin: 15px 0;
   float: left;
-  background: @brand-info;
+  background: @ads-bg;
+  .border-radius(2px);
 }
 .ads-side-fh
 {
@@ -13,16 +61,20 @@
   height: 100%;
   width: 100%;
   min-width: 90px;
-  margin: 0 auto;
+  margin: 0px auto;
   float: left;
-  background: @brand-info;
+  background: @ads-bg;
+  .border-radius(2px);
 
 }
 .ads-horizontal
 {
   width: 100%;
+
   height: 90px;
-  background: @brand-info;
+  background: @ads-bg;
+  .border-radius(2px);
+  margin: 15px 0 0;
 }
 .ads-white-space
 {
